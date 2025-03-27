@@ -9,7 +9,7 @@ export const commercial = [
     "bedrooms": "N/A",
     "bathrooms": "per unit",
     "area": "64,145",
-    "image": "../Assets/cards-image/Vatika-VLante/vlante.webp",
+    "image": "/Assets/cards-image/Vatika-VLante/vlante.webp",
     "images": [
       "../Assets/cards-image/Vatika-VLante/carousel-1.png",
       "../Assets/cards-image/Vatika-VLante/carousel-2.png",
@@ -48,7 +48,7 @@ export const commercial = [
     "bedrooms": "N/A",
     "bathrooms": "per unit",
     "area": "400*",
-    "image": "../Assets/cards-image/M3M-Route-65/M3M-Route.webp",
+    "image": "/Assets/cards-image/M3M-Route-65/M3M-Route.webp",
     "images": [
       "../Assets/cards-image/M3M-Route-65/carousel-1.jpg",
       "../Assets/cards-image/M3M-Route-65/carousel-2.jpg",
@@ -87,7 +87,7 @@ export const commercial = [
     "bedrooms": "N/A",
     "bathrooms": "per unit",
     "area": "1.5 Acres",
-    "image": "../Assets/cards-image/M3M-Paragon-57/m3m-paragon.jpg",
+    "image": "/Assets/cards-image/M3M-Paragon-57/m3m-paragon.jpg",
     "images": [
       "../Assets/cards-image/M3M-Paragon-57/carousel-1.jpg",
       "../Assets/cards-image/M3M-Paragon-57/carousel-2.jpg",
@@ -121,7 +121,7 @@ export const commercial = [
     "bedrooms": "N/A",
     "bathrooms": "Per unit",
     "area": "146 - 211 sq. yd.",
-    "image": "../Assets/cards-image/Reach-Buzz-114/reach-buzz-114.webp",
+    "image": "/Assets/cards-image/DLF-Arcade-68/DLF-Arcade.jpg",
     "images": [
       "../Assets/cards-image/DLF-Arcade-68/carousel-1.jpg",
       "../Assets/cards-image/DLF-Arcade-68/carousel-2.webp",
@@ -156,7 +156,7 @@ export const commercial = [
     "bedrooms": "N/A",
     "bathrooms": "Per Unit",
     "area": "5+ Acres",
-    "image": "../Assets/cards-image/Reach-Buzz-114/reach-buzz-114.webp",
+    "image": "/Assets/cards-image/Reach-Buzz-114/reach-buzz-114.webp",
     "images": [
       "../Assets/cards-image/Reach-Buzz-114/carousel-1.webp",
       "../Assets/cards-image/Reach-Buzz-114/carousel-2.jpg",
