@@ -466,9 +466,9 @@ export const residential = [
       "Swimming pool",
       "Children's play area"
     ],
-    "type": "3BHK",
-    "typetwo": "Apartments",
-    "developer": "Godrej "
+    "type":"3BHK",
+    "typetwo":"Apartments",
+    "developer":"Godrej "
   },
   {
     "id": "res_godrej_astra",
@@ -480,7 +480,7 @@ export const residential = [
     "bedrooms": "3,4",
     "bathrooms": "3,4",
     "area": "3050 - 4200 sq. ft.",
-    "image": "../Assets/cards-image/godrej-Astra/godrej-astra.webp",
+    "image":"../Assets/cards-image/godrej-Astra/godrej-astra.webp",
     "images": [
       "../Assets/cards-image/Godrej-Astra/carousel-1.jpg",
       "../Assets/cards-image/Godrej-Astra/carousel-2.jpg",
@@ -500,9 +500,9 @@ export const residential = [
       "24x7 security with advanced surveillance systems",
       "Seamless connectivity to Golf Course Road and major business hubs"
     ],
-    "type": "3BHK",
-    "typetwo": "Luxury Apartments",
-    "developer": "Godrej"
+    "type":"3BHK",
+    "typetwo":"Luxury Apartments",
+    "developer":"Godrej"
   },
   {
     "id": "res_godrej_miraya",
@@ -514,7 +514,7 @@ export const residential = [
     "bedrooms": "3.5, 4.5",
     "bathrooms": "3, 4",
     "area": "2800 - 4000 sq.ft.",
-    "image": "../Assets/cards-image/Godrej-Miraya/godrej-miraya.jpg",
+    "image":"../Assets/cards-image/Godrej-Miraya/godrej-miraya.jpg",
     "images": [
       "../Assets/cards-image/Godrej-Miraya/carousel-1.jpg",
       "../Assets/cards-image/Godrej-Miraya/carousel-2.png",
@@ -533,9 +533,9 @@ export const residential = [
       "High-speed elevators",
       "Proximity to top schools, hospitals, and commercial hubs"
     ],
-    "type": "4BHK",
-    "typetwo": "Apartments",
-    "developer": "Godrej Properties"
+    "type":"4BHK",
+    "typetwo":"Apartments",
+    "developer":"Godrej"
   }
   
   
