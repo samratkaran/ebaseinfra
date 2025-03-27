@@ -480,7 +480,7 @@ export const residential = [
     "bedrooms": "3,4",
     "bathrooms": "3,4",
     "area": "3050 - 4200 sq. ft.",
-    "image":"../Assets/cards-image/godrej-Astra/godrej-astra.webp",
+    "image":"../Assets/cards-image/godrej-Astra/carousel-2.jpg",
     "images": [
       "../Assets/cards-image/Godrej-Astra/carousel-1.jpg",
       "../Assets/cards-image/Godrej-Astra/carousel-2.jpg",
@@ -510,7 +510,7 @@ export const residential = [
     "description": "Godrej Miraya is an ultra-luxury residential project located in Sector 43, Golf Course Road, Gurugram. It offers expansive 3.5 and 4.5 BHK residences designed to provide a sophisticated and comfortable lifestyle. The project emphasizes exclusivity and elegance, catering to discerning homeowners.",
     "price": " ₹12.50 Cr Onwards",
     "location": "Sector 43, Gurugram",
-    "builder": "Godrej Properties",
+    "builder": "Godrej",
     "bedrooms": "3.5, 4.5",
     "bathrooms": "3, 4",
     "area": "2800 - 4000 sq.ft.",
