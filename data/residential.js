@@ -480,7 +480,7 @@ export const residential = [
     "bedrooms": "3,4",
     "bathrooms": "3,4",
     "area": "3050 - 4200 sq. ft.",
-    "image":"../Assets/cards-image/godrej-Astra/carousel-2.jpg",
+    "image":"../Assets/cards-image/godrej-Astra/godrej-astra.webp",
     "images": [
       "../Assets/cards-image/Godrej-Astra/carousel-1.jpg",
       "../Assets/cards-image/Godrej-Astra/carousel-2.jpg",
@@ -514,7 +514,7 @@ export const residential = [
     "bedrooms": "3.5, 4.5",
     "bathrooms": "3, 4",
     "area": "2800 - 4000 sq.ft.",
-    "image":"../Assets/cards-image/Godrej-Miraya/godrej-miraya.jpg",
+    "image":"../Assets/cards-image/Godrej-Miraya/Godrej-Miraya.JPG",
     "images": [
       "../Assets/cards-image/Godrej-Miraya/carousel-1.jpg",
       "../Assets/cards-image/Godrej-Miraya/carousel-2.png",
