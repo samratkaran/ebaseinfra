@@ -121,7 +121,7 @@ export const commercial = [
     "bedrooms": "N/A",
     "bathrooms": "Per unit",
     "area": "146 - 211 sq. yd.",
-    "image": "../Assets/cards-image/DLF-Arcade-68/DLF-Arcade.jpg",
+    "image": "../Assets/cards-image/Reach-Buzz-114/reach-buzz-114.webp",
     "images": [
       "../Assets/cards-image/DLF-Arcade-68/carousel-1.jpg",
       "../Assets/cards-image/DLF-Arcade-68/carousel-2.webp",
