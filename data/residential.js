@@ -511,16 +511,16 @@ export const residential = [
     "price": " ₹12.50 Cr Onwards",
     "location": "Sector 43, Gurugram",
     "builder": "Godrej",
-    "bedrooms": "3.5, 4.5",
-    "bathrooms": "3, 4",
-    "area": "2800 - 4000 sq.ft.",
+    "bedrooms": "3,4",
+    "bathrooms": "3,4",
+    "area": "2800 - 4000",
     "image":"../Assets/cards-image/Godrej-Miraya/Godrej-Miraya.JPG",
     "images": [
       "../Assets/cards-image/Godrej-Miraya/carousel-1.jpg",
       "../Assets/cards-image/Godrej-Miraya/carousel-2.png",
       "../Assets/cards-image/Godrej-Miraya/carousel-3.webp"
     ],
-    "badge": "Ultra-Luxury Residential",
+    "badge": "Ultra-Luxury",
     "features": [
       "Prime location with seamless connectivity to NH 48 and Rapid Metro Station",
       "24/7 security with CCTV surveillance and controlled access",
@@ -536,7 +536,7 @@ export const residential = [
     "type":"4BHK",
     "typetwo":"Apartments",
     "developer":"Godrej"
-  }
+  },
   
   
 ]
