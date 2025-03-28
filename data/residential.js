@@ -369,7 +369,7 @@ export const residential = [
   }
   ,
   {
-    "id": "res_bptp_amstoria",
+    "id": "res12",
     "name": "BPTP Amstoria Plots",
     "description": "BPTP Amstoria is a luxurious residential township located in Sector 102, Gurgaon, along the Dwarka Expressway. Spread over 126 acres, it offers a blend of premium living and lush green surroundings with well-planned plots.",
     "price": "₹6.0 Cr onwards",
@@ -401,7 +401,7 @@ export const residential = [
   }
   ,
   {
-    "id": "res_godrej_aristocrat",
+    "id": "res13",
     "name": "Godrej Aristocrat",
     "description": "Godrej Aristocrat is an ultra-luxurious residential development located in Sector 49, Gurgaon. Nestled near Golf Course Extension Road, this project offers expansive 3 BHK and 4 BHK apartments designed to provide a serene and opulent living experience amidst forest-themed surroundings.",
     "price": " ₹5.53 Cr Onwards",
@@ -437,7 +437,7 @@ export const residential = [
   }
   ,
   {
-    "id": "res_godrej_nature_plus",
+    "id": "res14",
     "name": "Godrej Nature Plus",
     "description": "Godrej Nature Plus is a residential project located in Sector 33, Sohna Road, Gurgaon, offering 2 and 3 BHK apartments designed to promote a healthier and happier lifestyle. The project emphasizes holistic well-being, providing residents with a serene environment amidst lush greenery.",
     "price": " ₹1.98 Cr Onwards",
@@ -471,7 +471,7 @@ export const residential = [
     "developer":"Godrej "
   },
   {
-    "id": "res_godrej_astra",
+    "id": "res15",
     "name": "Godrej Astra",
     "description": "Godrej Astra is a premium residential project located in Sector 54, Gurugram, offering ultra-luxurious 3 and 4 BHK apartments. Designed for exclusivity and elegance, the project features expansive balconies, world-class amenities, and seamless connectivity to prime locations.",
     "price": " ₹10.98 Cr Onwards",
@@ -505,7 +505,7 @@ export const residential = [
     "developer":"Godrej"
   },
   {
-    "id": "res_godrej_miraya",
+    "id": "res16",
     "name": "Godrej Miraya",
     "description": "Godrej Miraya is an ultra-luxury residential project located in Sector 43, Golf Course Road, Gurugram. It offers expansive 3.5 and 4.5 BHK residences designed to provide a sophisticated and comfortable lifestyle. The project emphasizes exclusivity and elegance, catering to discerning homeowners.",
     "price": " ₹12.50 Cr Onwards",
