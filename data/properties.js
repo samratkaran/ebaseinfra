@@ -1,5 +1,5 @@
 import { residential } from "./residential"
-import { commercial } from "./commercial"
+import { commercial } from "@/data/commercial"
 import { otherProperty } from "./otherProperty"
 import { kothiProperties } from "./kothi"
 import { plotProperties } from "./plot"
