@@ -1,7 +1,7 @@
 export const commercial = [
   {
     "id": "com1",
-    "name": "Vatika V'Lante",
+    "name": "Vatika V'Lante Commercial",
     "description": "Vatika V'Lante is a premier commercial development located in Sector 83, Gurgaon, within the expansive Vatika India Next township. This high-street retail hub offers a blend of retail shops, showrooms, banquets, and F&B outlets, designed to cater to the burgeoning population and professionals in New Gurgaon.",
     "price": "₹51 Lakhs Onwards",
     "location": "Sector 83, Gurgaon, India",
