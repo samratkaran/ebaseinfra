@@ -1,39 +1,6 @@
 
 export const residential = [
   {
-    "id": "res0",
-    "name": "Amara Floors New",
-    "description": "Amara Floors offers luxurious 3 BHK fully air-conditioned independent floors with premium specifications, nestled in the prime location of Sector 63A, Gurgaon. These residences are designed to provide a harmonious blend of modern amenities and serene natural surroundings.",
-    "price": "₹2.10 Cr Onwards",
-    "location": "Sector 63A, Gurugram",
-    "builder": "4S Developers",
-    "bedrooms": 3,
-    "bathrooms": 3,
-    "area": 1422,
-    "image": "../Assets/cards-image/amara-floors/amara-floors.jpg",
-    "images": [
-      "../Assets/cards-image/amara-floors/carousel-1.avif",
-      "../Assets/cards-image/amara-floors/carousel-2.jpg",
-      "../Assets/cards-image/amara-floors/carousel-3.webp"
-    ],
-    "badge": "Under Construction",
-    "features": [
-      "Modular Kitchen",
-      "Power Backup",
-      "Fully Air-Conditioned Homes",
-      "Premium Flooring",
-      "Acres of Verdant Greens",
-      "Smart Homes",
-      "Kids Play Area",
-      "Opulent Interiors",
-      "Gated Community",
-      "Ample Car Parking"
-    ],
-    "type": "3BHK",
-    "typetwo": "Luxury Independent Floors",
-    "developer": "4S Developers"
-  },
-  {
     id: "res1",
    "name": "BPTP Verti Greens 102",
   "description": "BPTP Verti Greens 102 is a luxurious residential project located in Sector 102, Gurugram, offering spacious 2 and 3 BHK apartments with modern amenities and lush green surroundings.",
