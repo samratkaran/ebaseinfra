@@ -408,11 +408,11 @@ export const residential = [
     "builder": "Godrej",
     "plot_sizes": ["3 BHK - 2200 sq. ft.", "4 BHK - 3000 sq. ft.", "Penthouse - 4000 sq. ft."],
     "area": "6 Acres",
-    "image": "../Assets/cards-image/godrej-miraya/godrej-miraya.jpg",
+    "image": "../Assets/cards-image/godrej-miraya/godrej-miraya.png",
     "images": [
       "../Assets/cards-image/godrej-miraya/carousel-1.jpg",
-      "../Assets/cards-image/godrej-miraya/carousel-2.png",
-      "../Assets/cards-image/godrej-miraya/carousel-3.webp",
+      "../Assets/cards-image/godrej-miraya/carousel-2.jpg",
+      "../Assets/cards-image/godrej-miraya/carousel-3.jpg",
     ],
     "badge": "Luxury Apartments",
     "features": [
