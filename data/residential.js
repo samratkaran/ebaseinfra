@@ -398,145 +398,38 @@ export const residential = [
     "type": "2BHK",
     "typetwo": "Gated Township",
     "developer": "BPTP"
-  }
-  ,
+  },
   {
     "id": "res13",
-    "name": "Godrej Aristocrat",
-    "description": "Godrej Aristocrat is an ultra-luxurious residential development located in Sector 49, Gurgaon. Nestled near Golf Course Extension Road, this project offers expansive 3 BHK and 4 BHK apartments designed to provide a serene and opulent living experience amidst forest-themed surroundings.",
-    "price": " ₹5.53 Cr Onwards",
-    "location": "Sector 49,Gurugram",
+    "name": "Godrej Miraya",
+    "description": "Godrej Miraya is an ultra-luxurious residential project located in Whitefield, Bangalore. Designed for elite living, it offers high-end apartments with world-class amenities and seamless connectivity.",
+    "price": "₹3.5 Cr onwards",
+    "location": "Whitefield, Bangalore, India",
     "builder": "Godrej",
-    "bedrooms": "3,4",
-    "bathrooms": "3,4",
-    "area": "968 - 1751",
-    "image": "../Assets/cards-image/Godrej-Aristocrat/godrej-aristocrat.png",
+    "plot_sizes": ["3 BHK - 2200 sq. ft.", "4 BHK - 3000 sq. ft.", "Penthouse - 4000 sq. ft."],
+    "area": "6 Acres",
+    "image": "../Assets/cards-image/godrej-miraya/godrej-miraya.jpg",
     "images": [
-      "../Assets/cards-image/Godrej-Aristocrat/carousel-1.webp",
-      "../Assets/cards-image/Godrej-Aristocrat/carousel-2.webp",
-      "../Assets/cards-image/Godrej-Aristocrat/carousel-3.webp"
+      "../Assets/cards-image/godrej-miraya/carousel-1.jpg",
+      "../Assets/cards-image/godrej-miraya/carousel-2.png",
+      "../Assets/cards-image/godrej-miraya/carousel-3.webp",
     ],
-    "badge": "Luxury Residences",
+    "badge": "Luxury Apartments",
     "features": [
-      "Forest-themed development",
-      "63,000 sq.ft clubhouse",
-      "Smart home features",
-      "Proximity to Golf Course Extension Road",
-      "Nestled amidst lush green surroundings",
-      "State-of-the-art amenities",
-      "24x7 security",
-      "Ample parking space",
-      "High-speed elevators",
-      "Modern fitness center",
-      "Swimming pool",
-      "Children's play area"
+      "Infinity Pool",
+      "Sky Lounge",
+      "Clubhouse",
+      "Gymnasium",
+      "Landscaped Gardens",
+      "Children's Play Area",
+      "24x7 Security",
+      "Smart Home Automation",
+      "High-Speed Elevators"
     ],
     "type": "3BHK",
-    "typetwo": "Luxury Apartments",
-    "developer": "Godrej "
+    "typetwo": "Gated Community",
+    "developer": "Godrej"
   }
-  ,
-  {
-    "id": "res14",
-    "name": "Godrej Nature Plus",
-    "description": "Godrej Nature Plus is a residential project located in Sector 33, Sohna Road, Gurgaon, offering 2 and 3 BHK apartments designed to promote a healthier and happier lifestyle. The project emphasizes holistic well-being, providing residents with a serene environment amidst lush greenery.",
-    "price": " ₹1.98 Cr Onwards",
-    "location": "Sector 33, Gurugram",
-    "builder": "Godrej",
-    "bedrooms": "2,3",
-    "bathrooms": "2,3",
-    "area": "1385 - 1996 ",
-    "image": "../Assets/cards-image/Godrej-Nature-Plus/godrej-nature-plus.jpg",
-    "images": [
-      "../Assets/cards-image/Godrej-Nature-Plus/carousel-1.avif",
-      "../Assets/cards-image/Godrej-Nature-Plus/carousel-2.jpg",
-      "../Assets/cards-image/Godrej-Nature-Plus/carousel-3.jpg"
-    ],
-    "badge": "Residential",
-    "features": [
-      "Holistic wellness amenities",
-      "Open greens and fitness activities",
-      "Spacious homes with modern designs",
-      "Proximity to major hubs in Gurgaon",
-      "State-of-the-art clubhouse",
-      "24x7 security",
-      "Ample parking space",
-      "High-speed elevators",
-      "Modern fitness center",
-      "Swimming pool",
-      "Children's play area"
-    ],
-    "type":"3BHK",
-    "typetwo":"Apartments",
-    "developer":"Godrej "
-  },
-  {
-    "id": "res15",
-    "name": "Godrej Astra",
-    "description": "Godrej Astra is a premium residential project located in Sector 54, Gurugram, offering ultra-luxurious 3 and 4 BHK apartments. Designed for exclusivity and elegance, the project features expansive balconies, world-class amenities, and seamless connectivity to prime locations.",
-    "price": " ₹10.98 Cr Onwards",
-    "location": "Sector 54, Gurugram",
-    "builder": "Godrej",
-    "bedrooms": "3,4",
-    "bathrooms": "3,4",
-    "area": "3050 - 4200 sq. ft.",
-    "image":"../Assets/cards-image/godrej-Astra/godrej-astra.webp",
-    "images": [
-      "../Assets/cards-image/Godrej-Astra/carousel-1.jpg",
-      "../Assets/cards-image/Godrej-Astra/carousel-2.jpg",
-      "../Assets/cards-image/Godrej-Astra/carousel-3.webp"
-    ],
-    "badge": "exclusive",
-    "features": [
-      "Expansive 70 ft. balconies for panoramic city views",
-      "Exclusive clubhouse with fine-dining restaurant & speakeasy bar",
-      "Serene forest park and boardwalk trail",
-      "Pet park and artful sculptures",
-      "Low-density design with only 2-3 units per floor",
-      "3-level basement parking for added convenience",
-      "Modern fitness center and spa",
-      "Swimming pool with sun deck",
-      "Children's play area",
-      "24x7 security with advanced surveillance systems",
-      "Seamless connectivity to Golf Course Road and major business hubs"
-    ],
-    "type":"3BHK",
-    "typetwo":"Luxury Apartments",
-    "developer":"Godrej"
-  },
-  {
-    "id": "res16",
-    "name": "Godrej Miraya",
-    "description": "Godrej Miraya is an ultra-luxury residential project located in Sector 43, Golf Course Road, Gurugram. It offers expansive 3.5 and 4.5 BHK residences designed to provide a sophisticated and comfortable lifestyle. The project emphasizes exclusivity and elegance, catering to discerning homeowners.",
-    "price": " ₹12.50 Cr Onwards",
-    "location": "Sector 43, Gurugram",
-    "builder": "Godrej",
-    "bedrooms": "3,4",
-    "bathrooms": "3,4",
-    "area": "2800 - 4000",
-    "image":"../Assets/cards-image/Godrej-Miraya/Godrej-Miraya.JPG",
-    "images": [
-      "../Assets/cards-image/Godrej-Miraya/carousel-1.jpg",
-      "../Assets/cards-image/Godrej-Miraya/carousel-2.png",
-      "../Assets/cards-image/Godrej-Miraya/carousel-3.webp"
-    ],
-    "badge": "Ultra-Luxury",
-    "features": [
-      "Prime location with seamless connectivity to NH 48 and Rapid Metro Station",
-      "24/7 security with CCTV surveillance and controlled access",
-      "Private balconies offering breathtaking views",
-      "State-of-the-art clubhouse and fitness center",
-      "Swimming pool and spa facilities",
-      "Children's play area and landscaped gardens",
-      "Eco-friendly measures including rainwater harvesting",
-      "Ample parking space",
-      "High-speed elevators",
-      "Proximity to top schools, hospitals, and commercial hubs"
-    ],
-    "type":"4BHK",
-    "typetwo":"Apartments",
-    "developer":"Godrej"
-  },
   
   
 ]
