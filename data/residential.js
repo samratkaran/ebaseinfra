@@ -1,7 +1,7 @@
 
 export const residential = [
   {
-    "id": "res13",
+    "id": "res0",
     "name": "Amara Floors",
     "description": "Amara Floors offers luxurious 3 BHK fully air-conditioned independent floors with premium specifications, nestled in the prime location of Sector 63A, Gurgaon. These residences are designed to provide a harmonious blend of modern amenities and serene natural surroundings.",
     "price": "₹2.10 Cr Onwards",
