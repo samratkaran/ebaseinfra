@@ -398,6 +398,41 @@ export const residential = [
     "typetwo": "Gated Township",
     "developer": "BPTP"
   },
+  {
+    "id": "res12",
+    "name": "Godrej Miraya",
+    "description": "Godrej Miraya offers ultra-luxurious 3 & 4 BHK residences in Sector 43, Gurgaon, developed by Godrej Properties. These high-end apartments are designed with world-class amenities, premium interiors, and expansive green landscapes for an exclusive living experience.",
+    "price": "₹9.49 Cr Onwards",
+    "location": "Sector 43, Gurugram",
+    "builder": "Godrej Properties",
+    "bedrooms": 3,
+    "bathrooms": 3,
+    "area": 2711,
+    "image": "../Assets/cards-image/godrejmiraya/miraya.png",
+    "images": [
+      "../Assets/cards-image/godrejmiraya/carousel-1.jpg",
+      "../Assets/cards-image/godrejmiraya/carousel-2.jpg",
+      "../Assets/cards-image/godrejmiraya/carousel-3.jpg"
+    ],
+    "badge": "Under Construction",
+    "features": [
+      "Closed Car Parking",
+      "Security Cabin",
+      "Yoga / Meditation Area",
+      "Jogging Track",
+      "Chess Board",
+      "Barbecue Area",
+      "Fountains",
+      "Landscaping & Tree Planting",
+      "Jacuzzi",
+      "Gymnasium",
+      "Kid's Pool"
+    ],
+    "type": "3BHK / 4BHK",
+    "typetwo": "Luxury Apartments",
+    "developer": "Godrej Properties"
+  },
+  
   
 ]
 
