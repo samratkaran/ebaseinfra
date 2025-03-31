@@ -87,7 +87,7 @@ export const commercial = [
     "bedrooms": "N/A",
     "bathrooms": "per unit",
     "area": "1.5 Acres",
-    "image": "/Assets/cards-image/M3M-Paragon-57/m3m-paragon.jpg",
+    "image": "/Assets/cards-image/M3M-Paragon-57/paragon.jpg",
     "images": [
       "../Assets/cards-image/M3M-Paragon-57/carousel-1.jpg",
       "../Assets/cards-image/M3M-Paragon-57/carousel-2.jpg",
