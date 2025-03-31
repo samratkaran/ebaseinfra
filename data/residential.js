@@ -467,6 +467,73 @@ export const residential = [
     "typetwo": "3BHK",
     "developer": "Godrej Properties"
   },
+  {
+    "id": "res15",
+    "name": "Godrej Nature Plus",
+    "description": "Godrej Nature Plus offers 2 & 3 BHK premium residences designed to promote a healthy and active lifestyle. Situated in the lush surroundings of Sector 33, Sohna, Gurugram, this project focuses on wellness and luxury through state-of-the-art amenities and eco-friendly features.",
+    "price": "₹1.98 Cr Onwards",
+    "location": "Sector 33, Sohna, Gurugram",
+    "builder": "Godrej",
+    "bedrooms": "2 & 3 BHK",
+    "bathrooms": "2 & 3",
+    "area": "1310 - 1996 Sq.ft.",
+    "image": "../Assets/cards-image/godrejnatureplus/natureplus.jpg",
+    "images": [
+        "../Assets/cards-image/godrejnatureplus/carousel-1.avif",
+        "../Assets/cards-image/godrejnatureplus/carousel-2.jpg",
+        "../Assets/cards-image/godrejnatureplus/carousel-3.jpg"
+    ],
+    "badge": "Under Construction",
+    "features": [
+        "AG6 Workout Facility",
+        "Bungee Dancing",
+        "Jogging Trail",
+        "Sports Arena",
+        "Water Volleyball",
+        "Open Greens",
+        "Fitness Activities",
+        "Spacious Homes",
+        "Gated Community",
+        "24x7 Security"
+    ],
+    "type": "Luxury Apartments",
+    "typetwo": "2BHK",
+    "developer": "Godrej"
+},
+{
+  "id": "res16",
+  "name": "Godrej Aristocrat",
+  "description": "Godrej Aristocrat offers ultra-luxurious 3.5 and 4 BHK residences in Sector 49, Gurugram. Developed by Godrej Properties, these homes provide spacious layouts, premium interiors, and a host of world-class amenities, ensuring an unparalleled living experience.",
+  "price": "₹5.53 Cr - ₹6.10 Cr Onwards",
+  "location": "Sector 49, Gurugram",
+  "builder": "Godrej",
+  "bedrooms": "4BHK",
+  "bathrooms": "3 & 4",
+  "area": "1800 - 2800 Sq.ft.",
+  "image": "../Assets/cards-image/godrejaristocrat/aristocrat.png",
+  "images": [
+      "../Assets/cards-image/godrejaristocrat/carousel-1.webp",
+      "../Assets/cards-image/godrejaristocrat/carousel-2.webp",
+      "../Assets/cards-image/godrejaristocrat/carousel-3.webp"
+  ],
+  "badge": "Under Construction",
+  "features": [
+      "Forest-Themed Development",
+      "63,000 Sq.ft Clubhouse",
+      "Infinity Pool",
+      "Smart Home Features",
+      "Italian Marble Flooring",
+      "VRV Highwall Technology",
+      "Modular Kitchen",
+      "Tranquil Forest Trails",
+      "Kids Play Area",
+      "24x7 Security"
+  ],
+  "type": "Luxury Apartments",
+  "typetwo": "4BHK",
+  "developer": "Godrej"
+}
+  
   
   
   
