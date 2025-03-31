@@ -399,12 +399,12 @@ export const residential = [
     "developer": "BPTP"
   },
   {
-    "id": "res12",
+    "id": "res13",
     "name": "Godrej Miraya",
     "description": "Godrej Miraya offers ultra-luxurious 3 & 4 BHK residences in Sector 43, Gurgaon, developed by Godrej Properties. These high-end apartments are designed with world-class amenities, premium interiors, and expansive green landscapes for an exclusive living experience.",
     "price": "₹9.49 Cr Onwards",
     "location": "Sector 43, Gurugram",
-    "builder": "Godrej Properties",
+    "builder": "Godrej",
     "bedrooms": 3,
     "bathrooms": 3,
     "area": 2711,
@@ -428,10 +428,46 @@ export const residential = [
       "Gymnasium",
       "Kid's Pool"
     ],
-    "type": "3BHK / 4BHK",
+    "type": "3BHK",
     "typetwo": "Luxury Apartments",
+    "developer": "Godrej"
+  },
+  {
+    "id": "res14",
+    "name": "Godrej Astra",
+    "description": "Godrej Astra offers ultra-luxurious 3 and 4 BHK residences in Sector 54, Gurugram. Developed by Godrej Properties, these homes provide spacious layouts, premium interiors, and a host of world-class amenities, ensuring an unparalleled living experience.",
+    "price": "₹10.34 Cr Onwards",
+    "location": "Sector 54, Gurugram",
+    "builder": "Godrej Properties",
+    "bedrooms": "3 & 4 BHK",
+    "bathrooms": "3 & 4",
+    "area": "3050 - 4200 Sq.ft.",
+    "image": "../Assets/cards-image/godrejastra/astra.webp",
+    "images": [
+      "../Assets/cards-image/godrejastra/carousel-1.jpg",
+      "../Assets/cards-image/godrejastra/carousel-2.jpg",
+      "../Assets/cards-image/godrejastra/carousel-3.webp"
+    ],
+    "badge": "Under Construction",
+    "features": [
+      "Prime Location",
+      "Luxury Living",
+      "Club House",
+      "Swimming Pool",
+      "Gymnasium",
+      "Landscaped Gardens",
+      "Spa",
+      "Coffee Shop",
+      "Badminton Court",
+      "Meditation Garden",
+      "Jogging Track",
+      "24x7 Security"
+    ],
+    "type": "Luxury Apartments",
+    "typetwo": "3BHK",
     "developer": "Godrej Properties"
   },
+  
   
   
 ]
