@@ -58,7 +58,7 @@ export default function SidebarNewsBlogs() {
                     y: { type: "spring", stiffness: 300, damping: 30 },
                     opacity: { duration: 0.5 },
                   }}
-                  className="bg-white rounded-lg shadow-md overflow-hidden absolute w-full"
+                  className="absolute w-full overflow-hidden bg-white rounded-lg shadow-md"
                   style={{
                     top: "100px",
                     height: `${cardHeight}px`,
@@ -71,21 +71,32 @@ export default function SidebarNewsBlogs() {
                         alt={newsItem.heading}
                         width={100}
                         height={100}
-                        className="w-full h-full object-cover"
+                        className="object-cover w-full h-full"
                       />
                     </div>
-                    <div className="p-3 w-2/3">
-                      <div className="flex items-center text-xs text-gray-500 mb-1">
+                    <div className="w-2/3 p-3">
+                      <div className="flex items-center mb-1 text-xs text-gray-500">
                         <Calendar className="w-3 h-3 mr-1" />
                         <span>{newsItem.date}</span>
                       </div>
-                      <h4 className="text-sm text-black  font-semibold mb-1 line-clamp-1">{newsItem.heading}</h4>
-                      <Link
-                        href={`/news/${newsItem.slug}`}
-                        className="text-xs text-[#FFD700] hover:text-[#FFC700] flex items-center"
-                      >
-                        View More <ArrowRight className="ml-1 w-3 h-3" />
-                      </Link>
+                      <h4 className="mb-1 text-sm font-semibold text-black line-clamp-1">{newsItem.heading}</h4>
+                      {newsItem.link ? (
+                        <a
+                          href={newsItem.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-xs text-[#FFD700] hover:text-[#FFC700] flex items-center"
+                        >
+                          View More <ArrowRight className="w-3 h-3 ml-1" />
+                        </a>
+                      ) : (
+                        <Link
+                          href={`/news/${newsItem.slug}`}
+                          className="text-xs text-[#FFD700] hover:text-[#FFC700] flex items-center"
+                        >
+                          View More <ArrowRight className="w-3 h-3 ml-1" />
+                        </Link>
+                      )}
                     </div>
                   </div>
                 </motion.div>
@@ -114,7 +125,7 @@ export default function SidebarNewsBlogs() {
                       delay: offset * 0.3,
                       ease: "easeOut",
                     }}
-                    className="bg-white rounded-lg shadow-md overflow-hidden"
+                    className="overflow-hidden bg-white rounded-lg shadow-md"
                   >
                     <div className="flex">
                       <div className="w-1/3">
@@ -123,20 +134,20 @@ export default function SidebarNewsBlogs() {
                           alt={blogs[index].heading}
                           width={100}
                           height={100}
-                          className="w-full h-full object-cover"
+                          className="object-cover w-full h-full"
                         />
                       </div>
-                      <div className="p-3 w-2/3">
-                        <div className="flex items-center text-xs text-gray-500 mb-1">
+                      <div className="w-2/3 p-3">
+                        <div className="flex items-center mb-1 text-xs text-gray-500">
                           <Calendar className="w-3 h-3 mr-1" />
                           <span>{blogs[index].date}</span>
                         </div>
-                        <h4 className="text-sm font-semibold text-black  mb-1 line-clamp-1">{blogs[index].heading}</h4>
+                        <h4 className="mb-1 text-sm font-semibold text-black line-clamp-1">{blogs[index].heading}</h4>
                         <Link
                           href={`/blog/${blogs[index].slug}`}
                           className="text-xs text-[#FFD700] hover:text-[#FFC700] flex items-center"
                         >
-                          View More <ArrowRight className="ml-1 w-3 h-3" />
+                          View More <ArrowRight className="w-3 h-3 ml-1" />
                         </Link>
                       </div>
                     </div>

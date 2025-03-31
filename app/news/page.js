@@ -1,44 +1,46 @@
-"use client";
+"use client"
 
-import { useState, useEffect } from "react";
-import { useSearchParams, useRouter } from "next/navigation";
-import Link from "next/link";
-import Image from "next/image";
-import { Calendar, ChevronRight } from "lucide-react";
-import { news } from "@/data/news";
-import PageCarousel from "@/components/page-carousel";
-import SidebarNewsBlogs from "@/components/sidebar-news-blogs";
-import Breadcrumb from "@/components/breadcrumb";
-import Pagination from "@/components/pagination";
-import carousel_one from "@/Assets/carousel_images/carousel_one.jpg";
-import carousel_two from "@/Assets/carousel_images/carousel_two.jpg";
-import carousel_three from "@/Assets/carousel_images/carousel_three.jpg";
+import { useState, useEffect } from "react"
+import { useSearchParams, useRouter } from "next/navigation"
+import Link from "next/link"
+import Image from "next/image"
+import { Calendar, ChevronRight } from "lucide-react"
+import { news } from "@/data/news"
+import PageCarousel from "@/components/page-carousel"
+import SidebarNewsBlogs from "@/components/sidebar-news-blogs"
+import Breadcrumb from "@/components/breadcrumb"
+import Pagination from "@/components/pagination"
 
-const ITEMS_PER_PAGE = 10;
+const ITEMS_PER_PAGE = 10
 
-const carouselImages = [carousel_one, carousel_two, carousel_three];
+const carouselImages = [
+  "/placeholder.svg?height=400&width=1200&text=News+1",
+  "/placeholder.svg?height=400&width=1200&text=News+2",
+  "/placeholder.svg?height=400&width=1200&text=News+3",
+]
 
 export default function NewsPage() {
-  const searchParams = useSearchParams();
-  const router = useRouter();
-  const pageParam = searchParams.get("page") || "1";
-  const currentPage = Number.isNaN(Number(pageParam)) ? 1 : Number(pageParam);
+  const searchParams = useSearchParams()
+  const router = useRouter()
+  const pageParam = searchParams.get("page") || "1"
+  const currentPage = Number.parseInt(pageParam, 10)
 
-  const [paginatedNews, setPaginatedNews] = useState([]);
-  const totalPages = Math.ceil(news.length / ITEMS_PER_PAGE) || 1;
+  const [paginatedNews, setPaginatedNews] = useState([])
+  const totalPages = Math.ceil(news.length / ITEMS_PER_PAGE)
 
+  // Scroll to top when page loads
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo(0, 0)
 
-    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
-    setPaginatedNews(news.slice(startIndex, startIndex + ITEMS_PER_PAGE));
-  }, [currentPage]);
+    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE
+    setPaginatedNews(news.slice(startIndex, startIndex + ITEMS_PER_PAGE))
+  }, [currentPage])
 
   const handlePageChange = (page) => {
-    router.push(`/news?page=${page}`);
-  };
+    router.push(`/news?page=${page}`)
+  }
 
-  const breadcrumbItems = [{ label: "News" }];
+  const breadcrumbItems = [{ label: "News" }]
 
   return (
     <div>
@@ -54,43 +56,48 @@ export default function NewsPage() {
           <div className="md:col-span-8">
             <h1 className="mb-8 text-3xl font-bold">Latest News</h1>
 
-            {paginatedNews.length === 0 ? (
-              <div className="py-12 text-center">
-                <p className="text-lg text-gray-600">No news available at the moment.</p>
-              </div>
-            ) : (
-              <div className="space-y-8">
-                {paginatedNews.map((item) => (
-                  <div key={item.id} className="overflow-hidden bg-white rounded-lg shadow-md">
-                    <div className="md:flex">
-                      <div className="md:w-1/3">
-                        <Image
-                          src={item.image || "/placeholder.svg?height=200&width=300&text=News"}
-                          alt={item.title || "News Image"}
-                          width={300}
-                          height={200}
-                          className="object-cover w-full h-48 md:h-full"
-                        />
+            <div className="space-y-8">
+              {paginatedNews.map((item) => (
+                <div key={item.id} className="overflow-hidden bg-white rounded-lg shadow-md">
+                  <div className="md:flex">
+                    <div className="md:w-1/3">
+                      <Image
+                        src={item.image || "/placeholder.svg?height=200&width=300&text=News"}
+                        alt={item.title}
+                        width={300}
+                        height={200}
+                        className="object-cover w-full h-48 md:h-full"
+                      />
+                    </div>
+                    <div className="p-6 md:w-2/3">
+                      <div className="flex items-center mb-2 text-sm text-gray-500">
+                        <Calendar className="w-4 h-4 mr-1" />
+                        <span>{item.date}</span>
                       </div>
-                      <div className="p-6 md:w-2/3">
-                        <div className="flex items-center mb-2 text-sm text-gray-500">
-                          <Calendar className="w-4 h-4 mr-1" />
-                          <span>{item.date || "Unknown Date"}</span>
-                        </div>
-                        <h2 className="mb-2 text-xl font-semibold text-black">{item.title}</h2>
-                        <p className="mb-4 text-gray-600 line-clamp-3">{item.excerpt || "No excerpt available."}</p>
+                      <h2 className="mb-2 text-xl font-semibold">{item.title}</h2>
+                      <p className="mb-4 text-gray-600 line-clamp-3">{item.excerpt}</p>
+                      {item.link ? (
+                        <a
+                          href={item.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-[#FFD700] hover:text-[#FFC700] font-medium inline-flex items-center"
+                        >
+                          Read More <ChevronRight className="w-4 h-4 ml-1" />
+                        </a>
+                      ) : (
                         <Link
                           href={`/news/${item.slug}`}
                           className="text-[#FFD700] hover:text-[#FFC700] font-medium inline-flex items-center"
                         >
                           Read More <ChevronRight className="w-4 h-4 ml-1" />
                         </Link>
-                      </div>
+                      )}
                     </div>
                   </div>
-                ))}
-              </div>
-            )}
+                </div>
+              ))}
+            </div>
 
             {news.length > ITEMS_PER_PAGE && (
               <Pagination currentPage={currentPage} totalPages={totalPages} onPageChange={handlePageChange} />
@@ -103,5 +110,6 @@ export default function NewsPage() {
         </div>
       </div>
     </div>
-  );
+  )
 }
+

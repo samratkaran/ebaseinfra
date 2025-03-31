@@ -20,7 +20,7 @@ export default function HomePage() {
   const [currentNewsIndex, setCurrentNewsIndex] = useState(0)
   const [currentBlogIndex, setCurrentBlogIndex] = useState(0)
 
-  const propertyTypes = ["2BHK", "3BHK", "4BHK", "Plot", "Commercial", "Kothi", "FoodCourt",]
+  const propertyTypes = ["2BHK", "3BHK", "4BHK", "Plot", "Commercial", "Kothi", "FoodCourt"]
   const developers = ["DLF", "Vatika", "Sobha"]
 
   const filteredProperties = activePropertyType === "residential" ? residential : commercial
@@ -58,7 +58,7 @@ export default function HomePage() {
   return (
     <div className="relative">
       {/* Hero Section */}
-      <section className="relative h-screen" alt="this is hero section">
+      <section className="relative h-screen">
         <HeroCarousel />
         <div className="absolute inset-0 flex flex-col items-center justify-center p-4 bg-black/40">
           <h1 className="mb-6 text-4xl font-bold text-center text-white md:text-5xl">Discover Your Dream Property</h1>
@@ -90,7 +90,7 @@ export default function HomePage() {
       </section>
 
       {/* Current Collection Section - Only Buttons */}
-      <section className="py-16 bg-gray-100" alt="this is current collection section">
+      <section className="py-16 bg-gray-100">
         <div className="container px-4 mx-auto">
           <h2 className="mb-8 text-3xl font-bold text-center text-black">Current Collection</h2>
 
@@ -108,7 +108,7 @@ export default function HomePage() {
       </section>
 
       {/* Featured Properties Section with Toggle */}
-      <section className="py-16 bg-white" alt="this is featured property section">
+      <section className="py-16 bg-white">
         <div className="container px-4 mx-auto">
           <div className="flex flex-col items-center mb-8">
             <h2 className="mb-6 text-3xl font-bold text-center text-black">Featured Properties</h2>
@@ -143,7 +143,6 @@ export default function HomePage() {
             </button>
 
             <div
-            
               ref={carouselRef}
               className="flex gap-6 pb-4 overflow-x-auto scrollbar-hide snap-x snap-mandatory"
               style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
@@ -170,14 +169,14 @@ export default function HomePage() {
       </section>
 
       {/* Latest News and Blogs Section */}
-      <section className="py-16 bg-gray-100" alt="this is news and blog section">
+      <section className="py-16 bg-gray-100">
         <div className="container px-4 mx-auto">
           <h2 className="mb-12 text-3xl font-bold text-center text-black">Latest News & Blogs</h2>
 
           <div className="grid grid-cols-1 gap-8 md:grid-cols-12">
             {/* Latest News Column */}
-            <div className="md:col-span-6" alt="this is news column">
-              <h3 className="text-2xl font-semibold mb-6 border-b-2 border-[#FFD700] pb-2  text-black  inline-block">Latest News</h3>
+            <div className="md:col-span-6">
+              <h3 className="text-2xl font-semibold mb-6 border-b-2 border-[#FFD700] pb-2 inline-block text-black">Latest News</h3>
               <div className="h-[600px] overflow-hidden relative">
                 <div className="relative h-full">
                   {news.map((newsItem, index) => {
@@ -222,12 +221,23 @@ export default function HomePage() {
                               <Calendar className="w-4 h-4 mr-1" />
                               <span>{newsItem.date}</span>
                             </div>
-                            <h4 className="mb-2 text-lg font-semibold text-black ">{newsItem.heading}</h4>
+                            <h4 className="mb-2 text-lg font-semibold text-black">{newsItem.heading}</h4>
                             <p className="mb-4 text-sm text-gray-600 line-clamp-2">{newsItem.description}</p>
                             <Button asChild variant="outline" size="sm">
-                              <Link href={`/news/${newsItem.slug}`} className="flex items-center">
-                                View More <ArrowRight className="w-4 h-4 ml-2" />
-                              </Link>
+                              {newsItem.link ? (
+                                <a
+                                  href={newsItem.link}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="flex items-center"
+                                >
+                                  View More <ArrowRight className="w-4 h-4 ml-2" />
+                                </a>
+                              ) : (
+                                <Link href={`/news/${newsItem.slug}`} className="flex items-center">
+                                  View More <ArrowRight className="w-4 h-4 ml-2" />
+                                </Link>
+                              )}
                             </Button>
                           </div>
                         </div>
@@ -239,8 +249,8 @@ export default function HomePage() {
             </div>
 
             {/* Blogs Column */}
-            <div className="md:col-span-6" alt="this is blog column">
-              <h3 className="text-2xl font-semibold mb-6 border-b-2 border-[#FFD700] pb-2 inline-block text-black ">Blogs</h3>
+            <div className="md:col-span-6">
+              <h3 className="text-2xl font-semibold mb-6 border-b-2 border-[#FFD700] pb-2 inline-block text-black">Blogs</h3>
               <div className="space-y-6 h-[600px] overflow-hidden relative">
                 <AnimatePresence mode="wait">
                   <div key={`blog-group-${currentBlogIndex}`} className="space-y-6">
@@ -274,8 +284,8 @@ export default function HomePage() {
                                 <Calendar className="w-4 h-4 mr-1" />
                                 <span>{blogs[index].date}</span>
                               </div>
-                              <h4 className="mb-2 text-lg font-semibold text-black ">{blogs[index].heading}</h4>
-                              <p className="mb-4 text-sm text-gray-600 line-clamp-2">{blogs[index].description}</p>
+                              <h4 className="mb-2 text-lg font-semibold text-black">{blogs[index].heading}</h4>
+                              <p className="mb-4 text-sm text-gray-600 line-clamp-2 ">{blogs[index].description}</p>
                               <Button asChild variant="outline" size="sm">
                                 <Link href={`/blog/${blogs[index].slug}`} className="flex items-center">
                                   View More <ArrowRight className="w-4 h-4 ml-2" />
@@ -295,7 +305,7 @@ export default function HomePage() {
       </section>
 
       {/* Sticky contact button */}
-      <div className="fixed z-50 bottom-8 right-8" alt="this is fixed button">
+      <div className="fixed z-50 bottom-8 right-8">
         <div className="relative">
           <Button
             onClick={() => setIsContactOpen(!isContactOpen)}
@@ -314,9 +324,9 @@ export default function HomePage() {
                 className="absolute right-0 flex flex-col gap-2 mb-4 bottom-full"
               >
                 {[
-                  { icon: MessageCircle, href: "https://wa.me/918826211177", color: "bg-[#25D366]" },  // WhatsApp
-  { icon: Mail, href: "mailto:info@ebaseinfra.com?subject=Inquiry", color: "bg-[#EA4335]" },  // Email
-  { icon: Phone, href: "tel:8826211177", color: "bg-[#0077B5]" } 
+                  { icon: MessageCircle, href: "https://wa.me/1234567890", color: "bg-[#25D366]" },
+                  { icon: Mail, href: "mailto:info@realtimerealtors.in", color: "bg-[#EA4335]" },
+                  { icon: Phone, href: "tel:956011997", color: "bg-[#0077B5]" },
                 ].map((item, index) => (
                   <motion.div
                     key={item.href}
