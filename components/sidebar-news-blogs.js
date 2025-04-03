@@ -75,7 +75,7 @@ export default function SidebarNewsBlogs() {
                       />
                     </div>
                     <div className="w-2/3 p-3">
-                      <div className="flex items-center mb-1 text-xs text-gray-500">
+                      <div className="flex items-center mb-1 text-xs text-gray-600">
                         <Calendar className="w-3 h-3 mr-1" />
                         <span>{newsItem.date}</span>
                       </div>
@@ -138,17 +138,28 @@ export default function SidebarNewsBlogs() {
                         />
                       </div>
                       <div className="w-2/3 p-3">
-                        <div className="flex items-center mb-1 text-xs text-gray-500">
+                        <div className="flex items-center mb-1 text-xs text-gray-600">
                           <Calendar className="w-3 h-3 mr-1" />
                           <span>{blogs[index].date}</span>
                         </div>
                         <h4 className="mb-1 text-sm font-semibold text-black line-clamp-1">{blogs[index].heading}</h4>
-                        <Link
-                          href={`/blog/${blogs[index].slug}`}
-                          className="text-xs text-[#FFD700] hover:text-[#FFC700] flex items-center"
-                        >
-                          View More <ArrowRight className="w-3 h-3 ml-1" />
-                        </Link>
+                        {blogs[index].link ? (
+                          <a
+                            href={blogs[index].link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-xs text-[#FFD700] hover:text-[#FFC700] flex items-center"
+                          >
+                            View More <ArrowRight className="w-3 h-3 ml-1" />
+                          </a>
+                        ) : (
+                          <Link
+                            href={`/blog/${blogs[index].slug}`}
+                            className="text-xs text-[#FFD700] hover:text-[#FFC700] flex items-center"
+                          >
+                            View More <ArrowRight className="w-3 h-3 ml-1" />
+                          </Link>
+                        )}
                       </div>
                     </div>
                   </motion.div>

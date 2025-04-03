@@ -21,6 +21,7 @@ export const kothiProperties = [
     typetwo: "Luxury",
     developer: "DLF",
   },
+  
  
 ]
 

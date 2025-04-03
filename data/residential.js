@@ -4,7 +4,7 @@ export const residential = [
     id: "res1",
    "name": "BPTP Verti Greens 102",
   "description": "BPTP Verti Greens 102 is a luxurious residential project located in Sector 102, Gurugram, offering spacious 2 and 3 BHK apartments with modern amenities and lush green surroundings.",
-  "price": "₹2.64 Cr Onwards",
+  "price": "₹2.65 Cr Onwards",
   "location": "Sector 102, Gurugram, India",
   "builder": "BPTP ",
   "bedrooms": 2,
@@ -29,14 +29,14 @@ export const residential = [
     "Ample Parking Space"
   ],
   "type": "2BHK",
-  "typetwo": "Luxury Apartments",
+  "typetwo": "residential",
   "developer": "BPTP"
   },
   {
     "id": "res2",
     "name": "Hero Homes The Palatial",
     "description": "Hero Homes The Palatial is an ultra-luxury residential project located in Sector 104, Gurugram, offering spacious 3 and 4 BHK apartments with European-themed architecture and modern amenities.",
-    "price": "₹4.68 Cr Onwards",
+    "price": "₹4.55 Cr Onwards",
     "location": "Sector 104, Gurugram, India",
     "builder": "Hero Homes",
     "bedrooms": 3,
@@ -62,7 +62,7 @@ export const residential = [
       "Ample Parking Space"
     ],
     "type": "3BHK",
-    "typetwo": "Luxury Apartments",
+    "typetwo": "residential",
     "developer": "Hero homes"
   },
   {
@@ -95,7 +95,7 @@ export const residential = [
       "Ample Parking Space"
     ],
     "type": "4BHK",
-    "typetwo": "Luxury Apartments",
+    "typetwo": "residential",
     "developer": "Sobha"
   },  
   {
@@ -128,7 +128,7 @@ export const residential = [
       "Ample Parking Space"
     ],
     "type": "4BHK",
-    "typetwo": "Luxury Apartments",
+    "typetwo": "residential",
     "developer": "Elan"
   },  
   {
@@ -161,7 +161,7 @@ export const residential = [
       "Energy efficient VRV/VRF Air conditioned apartments"
     ],
     "type": "2BHK",
-    "typetwo": "Luxury Apartments",
+    "typetwo": "residential",
     "developer": "M3M "
   }
   ,
@@ -195,7 +195,7 @@ export const residential = [
       "Double glazing for energy saving and peaceful living"
     ],
     "type": "2BHK",
-    "typetwo": "Luxury Apartments",
+    "typetwo": "residential",
     "developer": "M3M India"
   }
   ,
@@ -228,7 +228,7 @@ export const residential = [
       "Shuttle service, 24x7 Security, 24-hour power & water backup"
     ],
     "type": "2BHK",
-    "typetwo": "Luxury Independent Floors",
+    "typetwo": "residential",
     "developer": "Central Park"
   }
   ,
@@ -262,7 +262,7 @@ export const residential = [
       "Proximity to leading retail, educational, healthcare & hotels"
     ],
     "type": "2BHK",
-    "typetwo": "Luxury Independent Floors",
+    "typetwo": "residential",
     "developer": "Central Park"
   }
   ,
@@ -296,7 +296,7 @@ export const residential = [
       "Proximity to Major Business Hubs"
     ],
     "type": "3BHK",
-    "typetwo": "Luxury Independent Floors",
+    "typetwo": "residential",
     "developer": "Central Park"
   }
   ,
@@ -330,7 +330,7 @@ export const residential = [
       "Multipurpose Hall"
     ],
     "type": "3BHK",
-    "typetwo": "Luxury Apartments",
+    "typetwo": "residential",
     "developer": "Central Park"
   }
   ,
@@ -364,39 +364,8 @@ export const residential = [
       "Ample Car Parking"
     ],
     "type": "3BHK",
-    "typetwo": "Luxury Independent Floors",
+    "typetwo": "residential",
     "developer": "4S Developers"
-  },
-  {
-    "id": "res12",
-    "name": "BPTP Amstoria Plots",
-    "description": "BPTP Amstoria is a luxurious residential township located in Sector 102, Gurgaon, along the Dwarka Expressway. Spread over 126 acres, it offers a blend of premium living and lush green surroundings with well-planned plots.",
-    "price": "₹6.0 Cr onwards",
-    "location": "Sector 102, Gurgaon, India",
-    "builder": "BPTP",
-    "plot_sizes": ["225 sq. yd.", "250 sq. yd.", "300 sq. yd.", "495 sq. yd."],
-    "area": "126 Acres",
-    "image": "../Assets/cards-image/bptp-amstoria/bptp-amstoria.jpg",
-    "images": [
-      "../Assets/cards-image/bptp-amstoria/carousel-1.jpg",
-      "../Assets/cards-image/bptp-amstoria/carousel-2.jpg",
-      "../Assets/cards-image/bptp-amstoria/carousel-3.jpg"
-    ],
-    "badge": "Premium Plots",
-    "features": [
-      "Clubhouse",
-      "Swimming Pool",
-      "Gymnasium",
-      "Landscaped Gardens",
-      "Children's Play Area",
-      "High-Speed Elevators",
-      "24x7 Security",
-      "Ample Parking Space",
-      "Seamless Connectivity to Delhi"
-    ],
-    "type": "2BHK",
-    "typetwo": "Gated Township",
-    "developer": "BPTP"
   },
   {
     "id": "res13",
@@ -429,7 +398,7 @@ export const residential = [
       "Kid's Pool"
     ],
     "type": "3BHK",
-    "typetwo": "Luxury Apartments",
+    "typetwo": "residential",
     "developer": "Godrej"
   },
   {
@@ -439,9 +408,9 @@ export const residential = [
     "price": "₹10.34 Cr Onwards",
     "location": "Sector 54, Gurugram",
     "builder": "Godrej Properties",
-    "bedrooms": "3 & 4 BHK",
-    "bathrooms": "3 & 4",
-    "area": "3050 - 4200 Sq.ft.",
+    "bedrooms": 4,
+    "bathrooms": 4 ,
+    "area": 4200 ,
     "image": "../Assets/cards-image/godrejastra/astra.webp",
     "images": [
       "../Assets/cards-image/godrejastra/carousel-1.jpg",
@@ -463,8 +432,8 @@ export const residential = [
       "Jogging Track",
       "24x7 Security"
     ],
-    "type": "Luxury Apartments",
-    "typetwo": "3BHK",
+    "type": "3BHK",
+    "typetwo": "residential",
     "developer": "Godrej Properties"
   },
   {
@@ -474,9 +443,9 @@ export const residential = [
     "price": "₹1.98 Cr Onwards",
     "location": "Sector 33, Sohna, Gurugram",
     "builder": "Godrej",
-    "bedrooms": "2 & 3 BHK",
-    "bathrooms": "2 & 3",
-    "area": "1310 - 1996 Sq.ft.",
+    "bedrooms": 3,
+    "bathrooms": 3,
+    "area":  1996,
     "image": "../Assets/cards-image/godrejnatureplus/natureplus.jpg",
     "images": [
         "../Assets/cards-image/godrejnatureplus/carousel-1.avif",
@@ -496,8 +465,8 @@ export const residential = [
         "Gated Community",
         "24x7 Security"
     ],
-    "type": "Luxury Apartments",
-    "typetwo": "2BHK",
+    "type": "2BHK",
+    "typetwo": "residential",
     "developer": "Godrej"
 },
 {
@@ -507,9 +476,9 @@ export const residential = [
   "price": "₹5.53 Cr - ₹6.10 Cr Onwards",
   "location": "Sector 49, Gurugram",
   "builder": "Godrej",
-  "bedrooms": "4BHK",
-  "bathrooms": "3 & 4",
-  "area": "1800 - 2800 Sq.ft.",
+  "bedrooms": 4,
+  "bathrooms":  4,
+  "area":  2800,
   "image": "../Assets/cards-image/godrejaristocrat/aristocrat.png",
   "images": [
       "../Assets/cards-image/godrejaristocrat/carousel-1.webp",
@@ -529,10 +498,10 @@ export const residential = [
       "Kids Play Area",
       "24x7 Security"
   ],
-  "type": "Luxury Apartments",
-  "typetwo": "4BHK",
+  "type": "4BHK",
+  "typetwo": "residential",
   "developer": "Godrej"
-}
+},
   
   
   

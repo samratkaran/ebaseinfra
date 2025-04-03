@@ -9,6 +9,7 @@ export const blogs = [
     data:"While it is a recent technology, it looks like a huge feat to some people. However, it is less complicated than you think. Let us begin with an understanding of what is home automation. It is a technology that allows you to control your home devices automatically or remotely. You can define and trigger automatic functions for devices like lighting, security, and appliances through rules, scenes or schedules. Rules make a device respond to a certain scenario or an action of yours. For example, a light in your room turns on when you open the door. Scenes let you group devices so that each of them performs a particular action when the scene is triggered. Schedules allow you to pre-define a device’s function in certain ways at certain times. For instance, you can schedule the lights in the hall to turn on at dusk. Thus, home automation helps control the working of devices with minimum human intervention. It makes your life more convenient and helps save various costs. ",
     date: "March 12, 2025",
     slug: "first-home-buying-tips",
+    link: "https://vatikavlante.ebaseinfra.com/"
   },
   {
     id: "blog2",
@@ -27,6 +28,8 @@ export const blogs = [
     data:"In India, stamp duty is a government-imposed tax on the sale or transfer of a property (including flats). It is calculated as a percentage of the agreement value or the property’s market value, whichever is greater. Besides, a registration fee is levied to register the property in the buyer’s name. It marks the transaction officially in the government records. Stamp duty and registration fees can vary by state. As of 2024, stamp duty and registration fees in Kerala are set to 8% and 2% respectively. A buyer must look for rates specific to the state where the property is situated. Besides, recent variations in these rates are also likely. Considering these factors is vital to consolidating your apartment registration charges.",
     date: "march 19, 2025",
     slug: "profitable-real-estate-portfolio",
+    // Example of an external link (optional)
+    link: "https://vatikavlante.ebaseinfra.com/"
   },
   {
     id: "blog4",

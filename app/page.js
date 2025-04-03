@@ -1,59 +1,80 @@
-"use client"
+"use client";
 
-import { useState, useRef, useEffect } from "react"
-import Link from "next/link"
-import Image from "next/image"
-import { Search, Phone, Mail, MessageCircle, ChevronLeft, ChevronRight, Calendar, ArrowRight } from "lucide-react"
-import HeroCarousel from "@/components/hero-carousel"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { motion, AnimatePresence } from "framer-motion"
-import PropertyCard from "@/components/property-card"
-import { residential, commercial } from "@/data/properties"
-import { news } from "@/data/news"
-import { blogs } from "@/data/blogs"
+import { useState, useRef, useEffect } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import {
+  Search,
+  Phone,
+  Mail,
+  MessageCircle,
+  ChevronLeft,
+  ChevronRight,
+  Calendar,
+  ArrowRight,
+} from "lucide-react";
+import HeroCarousel from "@/components/hero-carousel";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { motion, AnimatePresence } from "framer-motion";
+import PropertyCard from "@/components/property-card";
+import { residential, commercial } from "@/data/properties";
+import { news } from "@/data/news";
+import { blogs } from "@/data/blogs";
 
 export default function HomePage() {
-  const [isContactOpen, setIsContactOpen] = useState(false)
-  const [activePropertyType, setActivePropertyType] = useState("residential")
-  const carouselRef = useRef(null)
-  const [currentNewsIndex, setCurrentNewsIndex] = useState(0)
-  const [currentBlogIndex, setCurrentBlogIndex] = useState(0)
+  const [isContactOpen, setIsContactOpen] = useState(false);
+  const [activePropertyType, setActivePropertyType] = useState("residential");
+  const carouselRef = useRef(null);
+  const [currentNewsIndex, setCurrentNewsIndex] = useState(0);
+  const [currentBlogIndex, setCurrentBlogIndex] = useState(0);
 
-  const propertyTypes = ["2BHK", "3BHK", "4BHK", "Plot", "Commercial", "Kothi", "FoodCourt"]
-  const developers = ["DLF", "Vatika", "Sobha"]
+  const propertyTypes = [
+    "2BHK",
+    "3BHK",
+    "4BHK",
+    "Plot",
+    "Commercial",
+    "Kothi",
+    "SCO",
+  ];
+  const developers = ["DLF", "Vatika", "Godrej", "sobha"];
 
-  const filteredProperties = activePropertyType === "residential" ? residential : commercial
+  const filteredProperties =
+    activePropertyType === "residential" ? residential : commercial;
 
   // News rotation effect - one by one continuous sliding
   useEffect(() => {
     const newsInterval = setInterval(() => {
-      setCurrentNewsIndex((prevIndex) => (prevIndex + 1) % news.length)
-    }, 3000)
+      setCurrentNewsIndex((prevIndex) => (prevIndex + 1) % news.length);
+    }, 3000);
 
-    return () => clearInterval(newsInterval)
-  }, [])
+    return () => clearInterval(newsInterval);
+  }, []);
 
   // Blog rotation effect
   useEffect(() => {
     const blogInterval = setInterval(() => {
-      setCurrentBlogIndex((prevIndex) => (prevIndex + 1) % blogs.length)
-    }, 5000)
+      setCurrentBlogIndex((prevIndex) => (prevIndex + 1) % blogs.length);
+    }, 5000);
 
-    return () => clearInterval(blogInterval)
-  }, [])
+    return () => clearInterval(blogInterval);
+  }, []);
 
   const scrollCarousel = (direction) => {
     if (carouselRef.current) {
-      const { scrollLeft, clientWidth } = carouselRef.current
-      const scrollTo = direction === "left" ? scrollLeft - clientWidth / 2 : scrollLeft + clientWidth / 2
+      const { scrollLeft, clientWidth } = carouselRef.current;
+      const scrollTo =
+        direction === "left"
+          ? scrollLeft - clientWidth / 2
+          : scrollLeft + clientWidth / 2;
 
       carouselRef.current.scrollTo({
         left: scrollTo,
         behavior: "smooth",
-      })
+      });
     }
-  }
+  };
 
   return (
     <div className="relative">
@@ -61,10 +82,17 @@ export default function HomePage() {
       <section className="relative h-screen">
         <HeroCarousel />
         <div className="absolute inset-0 flex flex-col items-center justify-center p-4 bg-black/40">
-          <h1 className="mb-6 text-4xl font-bold text-center text-white md:text-5xl">Discover Your Dream Property</h1>
+          <h1 className="mb-6 text-4xl font-bold text-center text-white md:text-5xl">
+            Discover Your Dream Property
+          </h1>
           <div className="w-full max-w-md p-4 mb-8 rounded-lg bg-white/80 backdrop-blur-sm">
             <form className="flex gap-2" action="/search">
-              <Input type="text" name="query" placeholder="Search properties..." className="flex-grow" />
+              <Input
+                type="text"
+                name="query"
+                placeholder="Search properties..."
+                className="flex-grow"
+              />
               <Button type="submit">
                 <Search className="w-4 h-4 mr-2" />
                 Search
@@ -74,7 +102,10 @@ export default function HomePage() {
           <div className="grid w-full max-w-4xl grid-cols-1 gap-4 md:grid-cols-3">
             {[
               { title: "Exclusive Property", href: "/exclusive-property" },
-              { title: "Pre Engineering Works", href: "/pre-engineering-works" },
+              {
+                title: "Pre Engineering Works",
+                href: "/pre-engineering-works",
+              },
               { title: "Major Land Deals", href: "/major-land-deals" },
             ].map((item) => (
               <Link
@@ -92,7 +123,9 @@ export default function HomePage() {
       {/* Current Collection Section - Only Buttons */}
       <section className="py-16 bg-gray-100">
         <div className="container px-4 mx-auto">
-          <h2 className="mb-8 text-3xl font-bold text-center text-black">Current Collection</h2>
+          <h2 className="mb-8 text-3xl font-bold text-center text-black">
+            Current Collection
+          </h2>
 
           {/* Filter Buttons */}
           <div className="flex flex-wrap justify-center gap-4">
@@ -111,21 +144,35 @@ export default function HomePage() {
       <section className="py-16 bg-white">
         <div className="container px-4 mx-auto">
           <div className="flex flex-col items-center mb-8">
-            <h2 className="mb-6 text-3xl font-bold text-center text-black">Featured Properties</h2>
+            <h2 className="mb-6 text-3xl font-bold text-center text-black">
+              Featured Properties
+            </h2>
 
             {/* Toggle Buttons */}
             <div className="flex gap-4">
               <Button
-                variant={activePropertyType === "residential" ? "default" : "outline"}
+                variant={
+                  activePropertyType === "residential" ? "default" : "outline"
+                }
                 onClick={() => setActivePropertyType("residential")}
-                className={activePropertyType === "residential" ? "bg-[#FFD700] text-black hover:bg-[#FFC700]" : ""}
+                className={
+                  activePropertyType === "residential"
+                    ? "bg-[#FFD700] text-black hover:bg-[#FFC700]"
+                    : ""
+                }
               >
                 Residential
               </Button>
               <Button
-                variant={activePropertyType === "commercial" ? "default" : "outline"}
+                variant={
+                  activePropertyType === "commercial" ? "default" : "outline"
+                }
                 onClick={() => setActivePropertyType("commercial")}
-                className={activePropertyType === "commercial" ? "bg-[#FFD700] text-black hover:bg-[#FFC700]" : ""}
+                className={
+                  activePropertyType === "commercial"
+                    ? "bg-[#FFD700] text-black hover:bg-[#FFC700]"
+                    : ""
+                }
               >
                 Commercial
               </Button>
@@ -171,21 +218,26 @@ export default function HomePage() {
       {/* Latest News and Blogs Section */}
       <section className="py-16 bg-gray-100">
         <div className="container px-4 mx-auto">
-          <h2 className="mb-12 text-3xl font-bold text-center text-black">Latest News & Blogs</h2>
+          <h2 className="mb-12 text-3xl font-bold text-center text-black">
+            Latest News & Blogs
+          </h2>
 
           <div className="grid grid-cols-1 gap-8 md:grid-cols-12">
             {/* Latest News Column */}
             <div className="md:col-span-6">
-              <h3 className="text-2xl font-semibold mb-6 border-b-2 border-[#FFD700] pb-2 inline-block text-black">Latest News</h3>
+              <h3 className="text-2xl font-semibold mb-6 border-b-2 border-[#FFD700] pb-2 inline-block text-black">
+                Latest News
+              </h3>
               <div className="h-[600px] overflow-hidden relative">
                 <div className="relative h-full">
                   {news.map((newsItem, index) => {
                     // Calculate position based on current index
-                    const position = (index - currentNewsIndex + news.length) % news.length
+                    const position =
+                      (index - currentNewsIndex + news.length) % news.length;
                     // Card height + margin
-                    const cardHeight = 220
+                    const cardHeight = 200;
                     // Spacing between cards
-                    const spacing = 20
+                    const spacing = 10;
 
                     return (
                       <motion.div
@@ -207,7 +259,7 @@ export default function HomePage() {
                         }}
                       >
                         <div className="flex flex-col h-full md:flex-row">
-                          <div className="h-full md:w-1/3">
+                          <div className="w-full h-32 md:w-1/3 md:h-full">
                             <Image
                               src={newsItem.image || "/placeholder.svg"}
                               alt={newsItem.heading}
@@ -216,13 +268,19 @@ export default function HomePage() {
                               className="object-cover w-full h-full"
                             />
                           </div>
-                          <div className="p-4 md:w-2/3">
-                            <div className="flex items-center mb-2 text-sm text-gray-500">
+                          <div className="flex flex-col justify-between w-full h-full p-4 md:w-2/3">
+                            <div className="flex items-center mb-2 text-sm text-gray-600">
                               <Calendar className="w-4 h-4 mr-1" />
                               <span>{newsItem.date}</span>
                             </div>
-                            <h4 className="mb-2 text-lg font-semibold text-black">{newsItem.heading}</h4>
-                            <p className="mb-4 text-sm text-gray-600 line-clamp-2">{newsItem.description}</p>
+                            <h4 className="mb-2 text-lg font-semibold text-black line-clamp-1">
+                              {newsItem.heading}
+                            </h4>
+                            <p className="hidden mb-4 text-sm text-gray-700 md:block">
+                              {newsItem.description.length > 120
+                                ? `${newsItem.description.substring(0, 120)}...`
+                                : newsItem.description}
+                            </p>
                             <Button asChild variant="outline" size="sm">
                               {newsItem.link ? (
                                 <a
@@ -231,18 +289,24 @@ export default function HomePage() {
                                   rel="noopener noreferrer"
                                   className="flex items-center"
                                 >
-                                  View More <ArrowRight className="w-4 h-4 ml-2" />
+                                  View More{" "}
+                                  <ArrowRight className="w-4 h-4 ml-2" />
                                 </a>
                               ) : (
-                                <Link href={`/news/${newsItem.slug}`} className="flex items-center">
-                                  View More <ArrowRight className="w-4 h-4 ml-2" />
+                                <Link
+                                  href={`/news/${newsItem.slug}`}
+                                  className="flex items-center"
+                                >
+                                {/* <Link href={`/blogs/${blogs[index].slug}`} className="flex items-center"></Link> */}
+                                  View More{" "}
+                                  <ArrowRight className="w-4 h-4 ml-2" />
                                 </Link>
                               )}
                             </Button>
                           </div>
                         </div>
                       </motion.div>
-                    )
+                    );
                   })}
                 </div>
               </div>
@@ -250,12 +314,17 @@ export default function HomePage() {
 
             {/* Blogs Column */}
             <div className="md:col-span-6">
-              <h3 className="text-2xl font-semibold mb-6 border-b-2 border-[#FFD700] pb-2 inline-block text-black">Blogs</h3>
+              <h3 className="text-2xl font-semibold mb-6 border-b-2 border-[#FFD700] pb-2 inline-block text-black">
+                Blogs
+              </h3>
               <div className="space-y-6 h-[600px] overflow-hidden relative">
                 <AnimatePresence mode="wait">
-                  <div key={`blog-group-${currentBlogIndex}`} className="space-y-6">
+                  <div
+                    key={`blog-group-${currentBlogIndex}`}
+                    className="space-y-6"
+                  >
                     {[0, 1, 2].map((offset) => {
-                      const index = (currentBlogIndex + offset) % blogs.length
+                      const index = (currentBlogIndex + offset) % blogs.length;
                       return (
                         <motion.div
                           key={`blog-${blogs[index].id}`}
@@ -280,21 +349,36 @@ export default function HomePage() {
                               />
                             </div>
                             <div className="p-4 md:w-2/3">
-                              <div className="flex items-center mb-2 text-sm text-gray-500">
+                              <div className="flex items-center mb-2 text-sm text-gray-600">
                                 <Calendar className="w-4 h-4 mr-1" />
                                 <span>{blogs[index].date}</span>
                               </div>
-                              <h4 className="mb-2 text-lg font-semibold text-black">{blogs[index].heading}</h4>
-                              <p className="mb-4 text-sm text-gray-600 line-clamp-2 ">{blogs[index].description}</p>
+                              <h4 className="mb-2 text-lg font-semibold text-black">
+                                {blogs[index].heading}
+                              </h4>
+                              <p className="mb-4 text-sm text-gray-700 line-clamp-2">
+                                {blogs[index].description}
+                              </p>
                               <Button asChild variant="outline" size="sm">
-                                <Link href={`/blog/${blogs[index].slug}`} className="flex items-center">
-                                  View More <ArrowRight className="w-4 h-4 ml-2" />
-                                </Link>
+                                {blogs[index].link ? (
+                                  <a
+                                    href={blogs[index].link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center"
+                                  >
+                                    View More <ArrowRight className="w-4 h-4 ml-2" />
+                                  </a>
+                                ) : (
+                                  <Link href={`/blog/${blogs[index].slug}`} className="flex items-center">
+                                    View More <ArrowRight className="w-4 h-4 ml-2" />
+                                  </Link>
+                                )}
                               </Button>
                             </div>
                           </div>
                         </motion.div>
-                      )
+                      );
                     })}
                   </div>
                 </AnimatePresence>
@@ -324,8 +408,16 @@ export default function HomePage() {
                 className="absolute right-0 flex flex-col gap-2 mb-4 bottom-full"
               >
                 {[
-                  { icon: MessageCircle, href: "https://wa.me/1234567890", color: "bg-[#25D366]" },
-                  { icon: Mail, href: "mailto:info@realtimerealtors.in", color: "bg-[#EA4335]" },
+                  {
+                    icon: MessageCircle,
+                    href: "https://wa.me/1234567890",
+                    color: "bg-[#25D366]",
+                  },
+                  {
+                    icon: Mail,
+                    href: "mailto:info@realtimerealtors.in",
+                    color: "bg-[#EA4335]",
+                  },
                   { icon: Phone, href: "tel:956011997", color: "bg-[#0077B5]" },
                 ].map((item, index) => (
                   <motion.div
@@ -339,7 +431,11 @@ export default function HomePage() {
                       asChild
                       className={`${item.color} hover:brightness-110 text-white rounded-full w-12 h-12 shadow-lg`}
                     >
-                      <a href={item.href} target="_blank" rel="noopener noreferrer">
+                      <a
+                        href={item.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <item.icon className="w-6 h-6" />
                       </a>
                     </Button>
@@ -351,6 +447,5 @@ export default function HomePage() {
         </div>
       </div>
     </div>
-  )
+  );
 }
-

@@ -12,12 +12,14 @@ export async function POST(request) {
 
     // Store the submission
     const result = await storeFormSubmission(data)
+    console.log(data)
 
     return NextResponse.json({
       success: true,
       message: "Form submitted successfully",
       submissionId: result.submissionId,
     })
+    
   } catch (error) {
     console.error("Error processing form submission:", error)
 

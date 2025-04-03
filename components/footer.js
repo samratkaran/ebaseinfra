@@ -173,7 +173,7 @@ export default function Footer() {
                 title="Our Location"
               ></iframe>
             </div>
-            <p className="text-sm text-muted-foreground">123 Luxury Avenue, Sector 15, Gurgaon, Haryana, India</p>
+            <p className="text-sm text-muted-foreground">Spaze iTech Park Sector 49 Gurugram, Haryana 122018</p>
           </div>
         </div>
 

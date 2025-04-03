@@ -54,13 +54,13 @@ export default function NewsPage() {
       <div className="container px-4 py-8 mx-auto">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-12">
           <div className="md:col-span-8">
-            <h1 className="mb-8 text-3xl font-bold">Latest News</h1>
+            <h1 className="mb-8 text-3xl font-bold text-black">Latest News</h1>
 
             <div className="space-y-8">
               {paginatedNews.map((item) => (
                 <div key={item.id} className="overflow-hidden bg-white rounded-lg shadow-md">
-                  <div className="md:flex">
-                    <div className="md:w-1/3">
+                  <div className="flex flex-col md:flex-row">
+                    <div className="w-full md:w-1/3">
                       <Image
                         src={item.image || "/placeholder.svg?height=200&width=300&text=News"}
                         alt={item.title}
@@ -69,13 +69,17 @@ export default function NewsPage() {
                         className="object-cover w-full h-48 md:h-full"
                       />
                     </div>
-                    <div className="p-6 md:w-2/3">
-                      <div className="flex items-center mb-2 text-sm text-gray-500">
+                    <div className="flex flex-col justify-between w-full h-full p-6 md:w-2/3">
+                      <div className="flex items-center mb-2 text-sm text-gray-600">
                         <Calendar className="w-4 h-4 mr-1" />
                         <span>{item.date}</span>
                       </div>
-                      <h2 className="mb-2 text-xl font-semibold">{item.title}</h2>
-                      <p className="mb-4 text-gray-600 line-clamp-3">{item.excerpt}</p>
+                      <h2 className="mb-2 text-xl font-semibold text-black">{item.title}</h2>
+                      <p className="mb-4 text-gray-700">
+                        {item.description && item.description.length > 180
+                          ? `${item.description.substring(0, 180)}...`
+                          : item.description}
+                      </p>
                       {item.link ? (
                         <a
                           href={item.link}
