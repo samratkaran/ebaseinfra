@@ -9,6 +9,7 @@ export async function POST(request) {
     if (!data.name || !data.email || !data.phone || !data.comment) {
       return NextResponse.json({ success: false, message: "Missing required fields" }, { status: 400 })
     }
+    console.log('karan in try block')
 
     const result = await storeFormSubmission(data)
 
@@ -22,10 +23,12 @@ export async function POST(request) {
     })
 
   } catch (error) {
+    console.log('karan is here becaouse error came')
     console.error("Error processing form submission:", error)
     console.log("Running on", process.env.NODE_ENV);
 console.log("Sending from:", process.env.SMTP_USER);
 
     return NextResponse.json({ success: false, message: "Failed to process submission" }, { status: 500 })
+
   }
 }

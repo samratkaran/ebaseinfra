@@ -127,6 +127,7 @@ export default function PopupForm() {
       }
     } catch (error) {
       console.error("Error submitting form:", error)
+      console.log('karan in catch block in pop up form')
       setErrors({ submit: "Failed to submit form. Please try again."})
     } finally {
       setIsSubmitting(false)
