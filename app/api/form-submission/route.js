@@ -23,6 +23,8 @@ export async function POST(request) {
 
   } catch (error) {
     console.error("Error processing form submission:", error)
+    console.log("Running on", process.env.NODE_ENV);
+console.log("Sending from:", process.env.SMTP_USER);
 
     return NextResponse.json({ success: false, message: "Failed to process submission" }, { status: 500 })
   }
