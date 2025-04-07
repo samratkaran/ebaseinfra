@@ -16,6 +16,8 @@ export async function POST(request) {
     // Send the email
     try {
       await sendFormEmail(data)
+      console.log("data send to mailer", data)
+      console.log("Email sent successfully")
     } catch (err) {
       console.error("❌ Email sending failed:", err)
     }
