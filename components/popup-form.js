@@ -122,11 +122,12 @@ export default function PopupForm() {
           setIsOpen(false)
         }, 5000)
       } else {
-        throw new Error("Failed to submit form")
+        console.error("failed to submit form:", error)
+        throw new Error("Failed to submit form") 
       }
     } catch (error) {
       console.error("Error submitting form:", error)
-      setErrors({ submit: "Failed to submit form. Please try again." })
+      setErrors({ submit: "Failed to submit form. Please try again."})
     } finally {
       setIsSubmitting(false)
     }
@@ -174,7 +175,7 @@ export default function PopupForm() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <h3 className="mb-2 text-xl font-semibold">Thank You!</h3>
+                  <h3 className="mb-2 text-xl font-semibold text-black">Thank You!</h3>
                   <p className="text-gray-600">
                     We have received your query. We'll be in touch with you within 24 to 48 hours.
                   </p>
