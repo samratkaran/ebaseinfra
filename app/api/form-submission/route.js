@@ -14,7 +14,12 @@ export async function POST(request) {
     const result = await storeFormSubmission(data)
 
     // Send the email
-    await sendFormEmail(data)
+    try {
+      await sendFormEmail(data)
+    } catch (err) {
+      console.error("❌ Email sending failed:", err)
+    }
+    
 
     return NextResponse.json({
       success: true,
