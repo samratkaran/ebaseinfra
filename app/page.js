@@ -410,15 +410,15 @@ export default function HomePage() {
                 {[
                   {
                     icon: MessageCircle,
-                    href: "https://wa.me/1234567890",
+                    href: "https://wa.me/8826211177",
                     color: "bg-[#25D366]",
                   },
                   {
                     icon: Mail,
-                    href: "mailto:info@realtimerealtors.in",
+                    href: "mailto:info@ebaseinfra.com",
                     color: "bg-[#EA4335]",
                   },
-                  { icon: Phone, href: "tel:956011997", color: "bg-[#0077B5]" },
+                  { icon: Phone, href: "tel:8826211177", color: "bg-[#0077B5]" },
                 ].map((item, index) => (
                   <motion.div
                     key={item.href}
