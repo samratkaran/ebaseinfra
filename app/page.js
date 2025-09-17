@@ -109,6 +109,7 @@ const [visible, setVisible] = useState(true);
           Your website is <b>unsupported</b> due to outdated dependencies.  
           Your <b>Next.js version</b> is outdated.
         </p>
+        {/* adding commient in page.js */}
 
         <div className="flex justify-end gap-3">
           <button
