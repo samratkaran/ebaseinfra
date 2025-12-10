@@ -27,7 +27,7 @@ export default function HeroCarousel() {
     <div className="absolute inset-0">
       {images.map((src, index) => (
         <Image
-          key={src}
+          key={index} // Use index as unique key
           src={src || "/placeholder.svg"}
           alt={`Luxury Home ${index + 1}`}
           fill
@@ -40,4 +40,3 @@ export default function HeroCarousel() {
     </div>
   )
 }
-

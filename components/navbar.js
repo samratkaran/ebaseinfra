@@ -71,7 +71,7 @@ export default function Navbar() {
           </Link>
 
           <div className="items-center hidden space-x-4 md:flex">
-            <form onSubmit={handleSearch} className="relative mr-4">
+            {/* <form onSubmit={handleSearch} className="relative mr-4">
               <Input
                 type="text"
                 placeholder="Search properties..."
@@ -87,9 +87,11 @@ export default function Navbar() {
               >
                 <Search className="w-4 h-4" />
               </Button>
-            </form>
+            </form> */}
 
-            <Button asChild variant="outline" className="bg-[#FFD700] text-black hover:bg-[#FFC700]">
+            
+
+            {/* <Button asChild variant="outline" className="bg-[#FFD700] text-black hover:bg-[#FFC700]">
               <a href="tel:+918826211177" className="flex items-center">
                 <Phone className="w-4 h-4 mr-2" />
                 <span>+91 8826211177</span>
@@ -100,7 +102,59 @@ export default function Navbar() {
                 <Mail className="w-4 h-4 mr-2" />
                 <span>Info@Ebaseinfra.com</span>
               </a>
+            </Button> */}
+
+            <div className="items-center hidden space-x-6 md:flex">
+  <form onSubmit={handleSearch} className="relative mr-4">
+    <Input
+      type="text"
+      placeholder="Search properties..."
+      value={searchQuery}
+      onChange={(e) => setSearchQuery(e.target.value)}
+      className="w-64 pr-10"
+    />
+    <Button
+      type="submit"
+      variant="ghost"
+      size="icon"
+      className="absolute right-0 top-0 h-full text-[#FFD700]"
+    >
+      <Search className="w-4 h-4" />
+    </Button>
+  </form>
+
+  {/* NEW TOP LINKS ADDED */}
+  <Link href="/about" className="text-[#FFD700] hover:text-white text-sm font-medium">
+    About
+  </Link>
+
+  <Link href="/properties" className="text-[#FFD700] hover:text-white text-sm font-medium">
+    Properties
+  </Link>
+
+  <Link href="/blog" className="text-[#FFD700] hover:text-white text-sm font-medium">
+    Blog
+  </Link>
+
+  <Link href="contact" className="text-[#FFD700] hover:text-white text-sm font-medium">
+    Contact Us
+  </Link>
+
+  <Button asChild variant="outline" className="bg-[#FFD700] text-black hover:bg-[#FFC700]">
+              <a href="tel:+918826211177" className="flex items-center">
+                <Phone className="w-4 h-4 mr-2" />
+                <span>+91 8826211177</span>
+              </a>
             </Button>
+
+            <Button asChild variant="outline" className="bg-[#FFD700] text-black hover:bg-[#FFC700]">
+              <a href="mailto:info@ebaseinfra.com" className="flex items-center">
+                <Mail className="w-4 h-4 mr-2" />
+                <span>Info@Ebaseinfra.com</span>
+              </a>
+            </Button>
+</div>
+
           </div>
 
           <Sheet open={isOpen} onOpenChange={setIsOpen}>

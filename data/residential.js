@@ -417,7 +417,7 @@ export const residential = [
       "../Assets/cards-image/godrejastra/carousel-2.jpg",
       "../Assets/cards-image/godrejastra/carousel-3.webp"
     ],
-    "badge": "Under Construction",
+    "badge": "Exclusive property",
     "features": [
       "Prime Location",
       "Luxury Living",
@@ -501,10 +501,6 @@ export const residential = [
   "type": "4BHK",
   "typetwo": "residential",
   "developer": "Godrej"
-},
-  
-  
-  
-  
+}, 
 ]
 

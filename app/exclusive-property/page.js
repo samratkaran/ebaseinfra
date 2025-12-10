@@ -3,11 +3,22 @@
 import { useState, useEffect } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import PropertyCard from "@/components/property-card";
-import { residential, commercial, otherProperty } from "@/data/properties";
 import PageCarousel from "@/components/page-carousel";
 import SidebarNewsBlogs from "@/components/sidebar-news-blogs";
 import Breadcrumb from "@/components/breadcrumb";
 import Pagination from "@/components/pagination";
+
+// IMPORT ALL PROPERTIES
+import {
+  residential,
+  commercial,
+  otherProperty,
+  kothiProperties,
+  plotProperties,
+  foodcourtProperties,
+} from "@/data/properties";
+
+// Carousel Images
 import carousel_one from "@/Assets/carousel_images/carousel_one.jpg";
 import carousel_two from "@/Assets/carousel_images/carousel_two.jpg";
 import carousel_three from "@/Assets/carousel_images/carousel_three.jpg";
@@ -20,46 +31,37 @@ export default function ExclusivePropertyPage() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const pageParam = searchParams.get("page") || "1";
-  const currentPage = Number.parseInt(pageParam, 10);
+  const currentPage = Number(pageParam);
 
   const [properties, setProperties] = useState([]);
   const [paginatedProperties, setPaginatedProperties] = useState([]);
   const [totalPages, setTotalPages] = useState(1);
 
   useEffect(() => {
-    // Scroll to top when page loads
     window.scrollTo(0, 0);
 
-    const allProperties = [...residential, ...commercial, ...otherProperty];
+    // MERGE ALL PROPERTIES
+    const allProperties = [
+      ...residential,
+      ...commercial,
+      ...otherProperty,
+      ...kothiProperties,
+      ...plotProperties,
+      ...foodcourtProperties,
+    ];
 
-    // Filtering logic for exclusive properties
-    let exclusiveProperties = allProperties.filter(
-      (property) =>
-        property.badge?.toLowerCase() === "exclusive" ||
-        property.badge?.toLowerCase() === "premium" ||
-        property.price?.includes("1,") // Properties over $1 million
-    );
-
-    // filter of bases of badge we can add new things also
-
-    // Sorting logic to show properties with "new" badge first
-    exclusiveProperties = exclusiveProperties.sort((a, b,c,d,e) => {
-      const aIsNew = a.badge?.toLowerCase() === "exclusive";
-      const bIsNew = b.badge?.toLowerCase() === "new";
-
-
-      if (aIsNew && !bIsNew) return -1; // "new" comes first
-      if (!aIsNew && bIsNew) return 1; // "new" comes first
-      return 0; // Keep original order otherwise
+    // FILTER ONLY EXCLUSIVE PROPERTIES
+    const exclusiveProperties = allProperties.filter((property) => {
+      const badge = property.badge?.toLowerCase() || "";
+      return badge.includes("exclusive");
     });
 
     setProperties(exclusiveProperties);
 
-    // Calculate total pages
-    const pages = Math.ceil(exclusiveProperties.length / ITEMS_PER_PAGE);
-    setTotalPages(pages > 0 ? pages : 1);
+    // PAGINATION
+    const pages = Math.ceil(exclusiveProperties.length / ITEMS_PER_PAGE) || 1;
+    setTotalPages(pages);
 
-    // Get current page items
     const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
     setPaginatedProperties(
       exclusiveProperties.slice(startIndex, startIndex + ITEMS_PER_PAGE)
@@ -74,20 +76,15 @@ export default function ExclusivePropertyPage() {
 
   return (
     <div>
-      {/* Carousel */}
       <PageCarousel images={carouselImages} />
-
-      {/* Breadcrumb */}
       <Breadcrumb items={breadcrumbItems} />
 
-      {/* Property Listings */}
       <div className="container px-4 py-8 mx-auto">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-12">
           <div className="md:col-span-8">
             <h1 className="mb-6 text-3xl font-bold">Exclusive Properties</h1>
             <p className="mb-8 text-gray-600">
-              Discover our collection of exclusive luxury properties, featuring
-              premium amenities and prime locations.
+              Discover our collection of exclusive premium properties.
             </p>
 
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
@@ -99,8 +96,7 @@ export default function ExclusivePropertyPage() {
             {properties.length === 0 && (
               <div className="py-12 text-center">
                 <p className="text-lg text-gray-600">
-                  No exclusive properties available at the moment. Please check
-                  back later.
+                  No exclusive properties available currently.
                 </p>
               </div>
             )}

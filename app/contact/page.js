@@ -52,7 +52,7 @@ export default function ContactPage() {
                   <MapPin className="w-5 h-5 text-[#FFD700] mt-1 mr-3" />
                   <div>
                     <h3 className="font-medium text-[#534d4d]">Address</h3>
-                    <p className="text-gray-600">Office no. 510, Tower A, Spaze iTech Park, Sohna - Gurgaon Rd, Block S, Sector 49, Gurugram, Haryana 122018</p>
+                    <p className="text-gray-600">Unit 151, JMD MEGAPOLIS, Sector 48, Gurugram, Haryana 122018</p>
                   </div>
                 </div>
                 <div className="flex items-start">
