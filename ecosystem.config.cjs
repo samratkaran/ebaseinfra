@@ -7,7 +7,7 @@ module.exports = {
       env_production: {
         NODE_ENV: "production",
         HOST: "127.0.0.1",  // bind to IPv4
-        PORT: 3000           // explicitly set port
+        PORT: 8080           // explicitly set port
       },
     },
   ],

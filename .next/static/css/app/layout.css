@@ -739,14 +739,8 @@ video {
 .h-\[200px\] {
   height: 200px;
 }
-.h-\[250px\] {
-  height: 250px;
-}
 .h-\[300px\] {
   height: 300px;
-}
-.h-\[350px\] {
-  height: 350px;
 }
 .h-\[400px\] {
   height: 400px;
@@ -1206,9 +1200,6 @@ video {
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
-}
-.text-\[3rem\] {
-  font-size: 3rem;
 }
 .text-lg {
   font-size: 1.125rem;
@@ -1768,10 +1759,6 @@ body {
 
   .md\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .md\:grid-cols-4 {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .md\:flex-row {
