@@ -11,12 +11,13 @@ import SidebarNewsBlogs from "@/components/sidebar-news-blogs"
 import Breadcrumb from "@/components/breadcrumb"
 import Pagination from "@/components/pagination"
 
+
 const ITEMS_PER_PAGE = 10
 
 const carouselImages = [
-  "/placeholder.svg?height=400&width=1200&text=Blog+1",
-  "/placeholder.svg?height=400&width=1200&text=Blog+2",
-  "/placeholder.svg?height=400&width=1200&text=Blog+3",
+  "/assets/blogs/one.jpg",
+  "/assets/blogs/two.jpg",
+  "/assets/blogs/three.png",
 ]
 
 export default function BlogPage() {

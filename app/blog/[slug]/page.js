@@ -2,27 +2,46 @@
 
 import { useEffect, useState } from "react"
 import Image from "next/image"
+import { useParams } from "next/navigation";
 import { Calendar } from "lucide-react"
 import { blogs } from "@/data/blogs"
 import SidebarNewsBlogs from "@/components/sidebar-news-blogs"
 import Breadcrumb from "@/components/breadcrumb"
 
-export default function BlogDetail({ params }) {
-  const [blogItem, setBlogItem] = useState(null)
+
+
+  export default function BlogDetail() {
+  const params = useParams();
+  const [blogItem, setBlogItem] = useState(null);
 
   useEffect(() => {
-    // Scroll to top when page loads
-    window.scrollTo(0, 0)
+    if (!params?.slug) return;
 
-    const item = blogs.find((item) => item.slug === params.slug)
-    setBlogItem(item)
-  }, [params.slug])
+    const slug = Array.isArray(params.slug)
+      ? params.slug[0]
+      : params.slug;
+
+    const item = blogs.find(b => b.slug === slug);
+    setBlogItem(item || null);
+  }, [params?.slug]);
 
   if (!blogItem) {
-    return <div className="container px-4 py-8 mx-auto">Loading...</div>
+    return (
+      <div className="container px-4 py-8 mx-auto text-center">
+        Loading...
+      </div>
+    );
   }
 
-  const breadcrumbItems = [{ label: "Blog", href: "/blog" }, { label: blogItem.heading }]
+
+  const breadcrumbItems = [
+    { label: "Blog", href: "/blog" },
+    { label: blogItem.heading },
+  ]
+
+  // render content…
+
+
 
   return (
     <div className="container px-4 py-8 mx-auto">

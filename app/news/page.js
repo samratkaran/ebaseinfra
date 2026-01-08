@@ -14,9 +14,9 @@ import Pagination from "@/components/pagination"
 const ITEMS_PER_PAGE = 10
 
 const carouselImages = [
-  "/placeholder.svg?height=400&width=1200&text=News+1",
-  "/placeholder.svg?height=400&width=1200&text=News+2",
-  "/placeholder.svg?height=400&width=1200&text=News+3",
+  "/assets/news/central-park.webp",
+  "/assets/news/four.webp",
+  "/assets/news/two.webp",
 ]
 
 export default function NewsPage() {
