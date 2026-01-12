@@ -3,7 +3,6 @@
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import localFont from "next/font/local"
 import {
   Search,
   Phone,
@@ -28,10 +27,7 @@ export default function HomePage() {
   const carouselRef = useRef(null);
   const [currentNewsIndex, setCurrentNewsIndex] = useState(0);
   const [currentBlogIndex, setCurrentBlogIndex] = useState(0);
-  const inter = localFont({
-  src: "./fonts/Inter-Regular.woff2",
-  variable: "--font-inter"
-})
+
   
 
   const propertyTypes = [

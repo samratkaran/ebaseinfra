@@ -17,6 +17,9 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ["var(--font-inter)"]
+      },
       colors: {
         gold: {
           DEFAULT: "#FFD700",
