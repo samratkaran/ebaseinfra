@@ -15,9 +15,9 @@ import Pagination from "@/components/pagination"
 const ITEMS_PER_PAGE = 10
 
 const carouselImages = [
-  "/assets/one.jpg",
-  "/assets/two.jpg",
-  "/assets/three.jpg",
+  "/Assets/one.jpg",
+  "/Assets/two.jpg",
+  "/Assets/three.jpg",
 ]
 
 export default function BlogPage() {
