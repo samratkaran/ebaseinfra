@@ -55,7 +55,7 @@ export default function BlogPage() {
       <div className="container px-4 py-8 mx-auto">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-12">
           <div className="md:col-span-8">
-            <h1 className="mb-8 text-3xl font-bold text-black">Blog Articles</h1>
+            <h1 className="mb-8 text-3xl font-bold text-white">Blog Articles</h1>
 
             <div className="space-y-8">
               {paginatedBlogs.map((item) => (
