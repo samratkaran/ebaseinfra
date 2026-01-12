@@ -5,16 +5,12 @@ import Footer from "@/components/footer"
 import PopupForm from "@/components/popup-form"
 import favicon from "@/public/favicon.ico"
 import Script from "next/script";
-import localFont from "next/font/local"
 import "./globals.css"
 
 
 
-const inter = localFont({
-  src: "./fonts/Inter-Regular.woff2",
-  variable: "--font-inter",
-  display: "swap"
-})
+const inter = Inter({ subsets: ["latin"] })
+
 
 export const metadata = {
   title: "EBASE Infratech Pvt Ltd",
