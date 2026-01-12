@@ -50,36 +50,78 @@ import Breadcrumb from "@/components/breadcrumb"
 
       <div className="grid grid-cols-1 gap-8 md:grid-cols-12">
         <div className="md:col-span-8">
-          <article className="overflow-hidden bg-white rounded-lg shadow-md">
-            <div className="relative h-[300px] md:h-[400px]">
-              <Image
-                src={blogItem.image || "/placeholder.svg?height=400&width=800&text=Blog"}
-                alt={blogItem.heading}
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="p-6">
-              <div className="flex items-center mb-4 text-sm text-gray-600">
-                <Calendar className="w-4 h-4 mr-1" />
-                <span>{blogItem.date}</span>
-              </div>
-              <h1 className="mb-6 text-3xl font-bold text-black">{blogItem.heading}</h1>
-              <div className="prose max-w-none">
-                <p className="text-gray-700">{blogItem.description}</p>
-                <p className="text-gray-700">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl vel ultricies lacinia, nisl
-                  nisl aliquam nisl, eget aliquam nisl nisl sit amet nisl. Sed euismod, nisl vel ultricies lacinia, nisl
-                  nisl aliquam nisl, eget aliquam nisl nisl sit amet nisl.
-                </p>
-                <p className="text-gray-700">
-                  Sed euismod, nisl vel ultricies lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet nisl.
-                  Sed euismod, nisl vel ultricies lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet nisl.
-                  Sed euismod, nisl vel ultricies lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet nisl.
-                </p>
-              </div>
-            </div>
-          </article>
+      <article className="overflow-hidden bg-white rounded-lg shadow-md">
+
+  {/* Blog Image (same as previous code) */}
+  <div className="relative h-[300px] md:h-[400px]">
+    <Image
+      src={blogItem.image || "/placeholder.svg?height=400&width=800&text=Blog"}
+      alt={blogItem.heading}
+      fill
+      className="object-cover"
+      priority
+    />
+  </div>
+
+  {/* Content */}
+  <div className="p-6">
+    <div className="flex items-center mb-4 text-sm text-gray-600">
+      <Calendar className="w-4 h-4 mr-1" />
+      <span>{blogItem.date}</span>
+    </div>
+
+    <h1 className="mb-6 text-3xl font-bold text-black">
+      {blogItem.heading}
+    </h1>
+
+    <div className="prose max-w-none">
+      {blogItem.content?.map((block, index) => {
+        switch (block.type) {
+          case "heading":
+            if (block.level === 2)
+              return <h2 key={index} className="mt-8 text-2xl font-bold text-black">{block.text}</h2>
+            if (block.level === 3)
+              return <h3 key={index} className="mt-8 font-bold text-black text-[1.2rem]">{block.text}</h3>
+            return null
+
+          case "paragraph":
+            return <p key={index} className="mt-2 text-black">{block.text}</p>
+
+          case "list":
+            return block.style === "ordered" ? (
+              <ol key={index} className="mt-2 text-black">
+                {block.items.map((item, i) => (
+                  <li key={i}  className="mt-2 text-black list-decimal list-inside" >{item}</li>
+                ))}
+              </ol>
+            ) : (
+              <ul key={index} className="mt-2 text-black list-disc list-inside">
+                {block.items.map((item, i) => (
+                  <li key={i}>{item}</li>
+                ))}
+              </ul>
+            )
+            case "numbered-section":
+  return (
+    <div key={index} className="mt-6">
+      <p className="font-bold text-black">
+        {block.number}. {block.title}
+      </p>
+      <p className="mt-2 text-black">
+        {block.text}
+      </p>
+    </div>
+  )
+
+
+          default:
+            return null
+        }
+      })}
+    </div>
+  </div>
+</article>
+
         </div>
 
         <div className="md:col-span-4">
