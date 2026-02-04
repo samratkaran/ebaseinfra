@@ -14,9 +14,9 @@ import Pagination from "@/components/pagination"
 const ITEMS_PER_PAGE = 10
 
 const carouselImages = [
-  "/assets/news/central-park.webp",
-  "/assets/news/four.webp",
-  "/assets/news/two.webp",
+  "/Assets/one.jpg",
+  "/Assets/two.jpg",
+  "/Assets/three.jpg",
 ]
 
 export default function NewsPage() {

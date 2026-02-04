@@ -173,7 +173,7 @@ export default function Footer() {
                 title="Our Location"
               ></iframe>
             </div>
-            <p className="text-sm text-muted-foreground">Spaze iTech Park Sector 49 Gurugram, Haryana 122018</p>
+            <p className="text-sm text-muted-foreground">Unit-151, First Floor, JMD Megapolis, Sector 48, Gurugram, Haryana(122018)</p>
           </div>
         </div>
 
