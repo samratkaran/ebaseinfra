@@ -11,7 +11,6 @@ export default function Footer() {
     // Handle newsletter subscription
     console.log("Newsletter subscription submitted")
   }
-
   return (
     <footer className="border-t bg-secondary border-gold-500/20">
       <div className="container py-12 md:py-16">
